@@ -33,6 +33,13 @@ p {
 ol, ul{
 }
 
+a{
+    text-decoration: none;
+    &:hover, &:focus{
+        text-decoration: none;
+    }
+}
+
 .text{
     &-right{text-align: right;}
     &-center{text-align: center;}

@@ -6,5 +6,25 @@
         text-transform: uppercase;
         color: $violet;
         line-height: 1.1;
+        font-size: $font-size-sm;
+        font-weight: 800;
+
+        @extend .mb-1;
+
+        &_link{
+            display: block;
+        }
+    }
+    &__subtitle{
+        color: $violet;
+        line-height: 1.1;
+        font-size: 12px;
+
+        &_link{
+            text-decoration: underline;
+            &:hover, &:focus{
+                text-decoration: underline;
+            }
+        }
     }
 }

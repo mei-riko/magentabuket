@@ -3,13 +3,13 @@
 
 
 @font-face {
-	font-family: 'GolosTextWebBold';
+	font-family: 'Golos';
 	src: url('Golos%20Text_Bold.eot');
 	src:
 	     url('Golos%20Text_Bold.eot?#iefix') format('embedded-opentype'),
 	     url('Golos%20Text_Bold.woff2') format('woff2'),
 	     url('Golos%20Text_Bold.woff') format('woff'),
 	     url('Golos%20Text_Bold.ttf') format('truetype');
-	font-weight: normal;
+	font-weight: 800;
 	font-style: normal;
 }
