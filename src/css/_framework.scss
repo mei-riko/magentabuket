@@ -1,5 +1,5 @@
 html,body {
-    font-size: 1rem;;
+    font-size: 16px;
     line-height: 1;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
@@ -13,9 +13,11 @@ html,body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{
 }
+
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
 }
+
 .h1,h1{font-size: 2.75rem;}
 .h2,h2{font-size: 2.5rem;}
 .h3,h3{font-size: 2rem;}
@@ -24,14 +26,11 @@ h1, h2, h3, h4, h5, h6,
 .h6,h6{font-size: 1.25rem;}
 
 p {
+    &:last-child{
+        margin-bottom: 0;
+    }
 }
 ol, ul{
-}
-
-.d{
-    &-flex{display: flex;}
-    &-none{display: none;}
-    &-block{display: block;}
 }
 
 .text{
@@ -46,59 +45,40 @@ ol, ul{
     max-width: 100%;
 }
 
-.img-border{}
 .blockquote, blockquote{}
 
-.mt{
-    &_none{}
-    &_small{}
-    &_medium{}
-    &_large{}
-}
-.mb{
-    &_none{}
-    &_small{}
-    &_medium{}
-    &_large{}
-}
-.pt{
-    &_none{}
-    &_small{}
-    &_medium{}
-    &_large{}
-}
-.pb{
-    &_none{}
-    &_small{}
-    &_medium{}
-    &_large{}
-}
 
-@media all and (max-width: map-get($grid-breakpoints, 'xl')){
-    .text-xl{
+@media all and (min-width: map-get($grid-breakpoints, 'sm')){
+    .text-sm{
         &-left{text-align: left;}
         &-center{text-align: center;}
         &-right{text-align: right;}
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'lg')){
-    .text-lg{
-        &-left{text-align: left;}
-        &-center{text-align: center;}
-        &-right{text-align: right;}
-    }
-}
-@media all and (max-width: map-get($grid-breakpoints, 'md')){
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
     .text-md{
         &-left{text-align: left;}
         &-center{text-align: center;}
         &-right{text-align: right;}
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
-    .text-sm{
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
+    .text-lg{
         &-left{text-align: left;}
         &-center{text-align: center;}
         &-right{text-align: right;}
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .text-xl{
+        &-left{text-align: left;}
+        &-center{text-align: center;}
+        &-right{text-align: right;}
+    }
+}
+
+@media all and (min-width: 1920px){
+    html,body {
+        font-size: 18px;
     }
 }

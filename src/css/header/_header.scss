@@ -1,0 +1,10 @@
+.header{
+    @extend .pt-3;
+    @extend .pb-3;
+
+    &__title{
+        text-transform: uppercase;
+        color: $violet;
+        line-height: 1.1;
+    }
+}

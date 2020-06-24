@@ -35,36 +35,4 @@ $(document).ready(() =>{
 		  return false;
 	  }
 	});
-	
-	  // Mobile Navbar
-  $(".navbar-toggle#nav").on("click", function(){
-    if( !$(this).hasClass("navbar-toggle--active")){
-        $(this).addClass("navbar-toggle--active");
-        $(".navbar-mobile").addClass("navbar-mobile--active");
-        $(".navbar-mobile").slideDown();
-    }else{
-        $(this).removeClass("navbar-toggle--active");
-        $(".navbar-mobile").removeClass("navbar-mobile--active");
-        $(".navbar-mobile").slideUp();
-    }
-  });
-  $(document).mouseup(function (e){ // событие клика по веб-документу
-    let dropdownActive = $(".navbar-mobile.navbar-mobile--active"); // элемент
-      
-    if (!dropdownActive.is(e.target) // клик был не по блоку
-          && dropdownActive.has(e.target).length === 0 // и не по его дочерним элементам
-          && !$(".navbar-toggle#nav").is(e.target) ) { 
-              $(".navbar-toggle").removeClass("navbar-toggle--active");
-              dropdownActive.removeClass("navbar-mobile--active");
-              $(".navbar-mobile").slideUp();
-    }
-  });
-  // Hide Navigation on Desktop
-  $(window).resize(function(){
-    if ( $(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches ){
-      $(".navbar-toggle").removeClass("navbar-toggle--active");
-      $(".navbar-mobile.navbar-mobile--active").removeClass("navbar-mobile--active");
-      $(".navbar-mobile").slideUp();
-    }
-  });
 });
