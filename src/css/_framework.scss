@@ -1,6 +1,6 @@
 html,body {
-    font-size: map-get($font-size, 'xl');;
-    line-height: $line-height;
+    font-size: 1rem;;
+    line-height: 1;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
 }
@@ -12,14 +12,9 @@ html,body {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{
-    font-family: $font-family-base;
-    font-weight: $font-weight-heading;
-    line-height: $line-height-heading;
-    margin-bottom: map-get($spacers, 4);
 }
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
-    margin-top: map-get($spacers, 6);
 }
 .h1,h1{font-size: 2.75rem;}
 .h2,h2{font-size: 2.5rem;}
@@ -29,57 +24,15 @@ h1, h2, h3, h4, h5, h6,
 .h6,h6{font-size: 1.25rem;}
 
 p {
-    font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: map-get($spacers, 3);
 }
 ol, ul{
-    padding: 0;
-    margin-bottom: map-get($spacers, 3);
 }
-a{
-    display: inline-block;
-    outline: none;
-    transition: .3s;
-
-    color: $link-color;
-
-    &:hover, &:focus{
-        color: $link-hover-color;
-        outline: none;
-    }
-}
-.link{
-    &_inverse{
-        color: $link-hover-color;
-        &:hover{
-            color: $link-color;
-        }
-    }
-    &_underline{
-        text-decoration: underline;
-    }
-}
-
-.p-relative{position: relative;}
-.p-sticky{position: sticky; top: 0; left: 0; z-index: 101;}
-.p-absolute{position: absolute; top: 0; left: 0; z-index: 101;}
 
 .d{
     &-flex{display: flex;}
     &-none{display: none;}
     &-block{display: block;}
 }
-
-.text-white{color: $white;}
-.text-black{color: $black;}
-.text-gold{color: $gold;}
-
-.text-uppercase{text-transform: uppercase;}
-.text-bold,strong,b{font-weight: 700;}
-
-.text-small,small,.small{font-size: 0.9rem;}
-.text-lead,small,.lead{font-size: 1.2rem;}
 
 .text{
     &-right{text-align: right;}
@@ -93,10 +46,7 @@ a{
     max-width: 100%;
 }
 
-.img-border{
-    border: 1px solid $border-color;
-}
-
+.img-border{}
 .blockquote, blockquote{}
 
 .mt{
@@ -111,13 +61,6 @@ a{
     &_medium{}
     &_large{}
 }
-.mr{
-    &_none{}
-}
-.ml{
-    &_none{}
-}
-
 .pt{
     &_none{}
     &_small{}
@@ -132,11 +75,6 @@ a{
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
-    .d-xl{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
-    }
     .text-xl{
         &-left{text-align: left;}
         &-center{text-align: center;}
@@ -144,11 +82,6 @@ a{
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
-    .d-lg{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
-    }
     .text-lg{
         &-left{text-align: left;}
         &-center{text-align: center;}
@@ -156,11 +89,6 @@ a{
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
-    .d-md{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
-    }
     .text-md{
         &-left{text-align: left;}
         &-center{text-align: center;}
@@ -168,11 +96,6 @@ a{
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
-    .d-sm{
-        &-flex{display: flex;}
-        &-none{display: none;}
-        &-block{display: block;}
-    }
     .text-sm{
         &-left{text-align: left;}
         &-center{text-align: center;}

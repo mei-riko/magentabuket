@@ -3,7 +3,7 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Basic Page
+        title Text Page
 
         link(href='./css/style.css', rel='stylesheet')
 
@@ -12,8 +12,11 @@ html(lang="ru")
         include chunks/header.pug
         .container
             .row.justify-content-center
-                .col-8.text-center
-                    p Привет
+                .col-12.text-center
+                    h1 Привет
+                    h2 Привет
+                    h3 Привет
+                    h4 Привет
         include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")
