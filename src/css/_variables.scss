@@ -18,8 +18,9 @@ $black:    #000 !default;
 
 // Theme Colors Magenta
 $pink-100:  #fbf7f4;
-$pink-200:  #e4dfdb;
-$pink-300:  #d6d1cd;
+$pink-200:  #f8f1ed;
+$pink-300:  #e4dfdb;
+$pink-400:  #d6d1cd;
 $pink:      #dd5387;
 $violet:    #6d4152;
 $gray-800:  #3d3e40;
@@ -266,7 +267,7 @@ $caret-width:                 .3em !default;
 $caret-vertical-align:        $caret-width * .85 !default;
 $caret-spacing:               $caret-width * .85 !default;
 
-$transition-base:             all .2s ease-in-out !default;
+$transition-base:             all .35s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
 

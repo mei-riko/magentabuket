@@ -1,4 +1,8 @@
 import $ from 'jquery'
+import '../../node_modules/popper.js/dist/umd/popper';
+import '../../node_modules/bootstrap/js/dist/util';
+import '../../node_modules/bootstrap/js/dist/tooltip';
+
 $(document).ready(() =>{
     $("a.scroll").click(function() {
         $("html, body").animate({
@@ -35,4 +39,11 @@ $(document).ready(() =>{
 		  return false;
 	  }
 	});
+
+	// Подсказка
+	$('[data-toggle="tooltip"]').tooltip();
+	// Отмена стандартного поведения ссылки
+	$('a[data-trigger="click"]').click(function(e){
+		e.preventDefault();
+	})
 });

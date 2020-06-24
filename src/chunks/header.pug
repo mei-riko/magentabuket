@@ -6,14 +6,14 @@ header.header
                 p.header__subtitle пр. Юрия Гагарина, 7
             .col-12.col-xl-2
                 p.header__title Служба доставка
-                p.header__subtitle ежедневно с 7 до 23
+                a.header__subtitle.header__subtitle_link(href="javascript:;" data-toggle="tooltip" data-placement="bottom" title="По согласованию возможна доставка в другое время") ежедневно с 7 до 23
             .col-12.col-xl-4
                 a.logo.logo_header(href="index.html")
             .col-12.col-xl-2
                 a.header__title.header__title_link(href="tel:+7 (495) 120 55 77") +7 (495) 120 55 77     
                 a.header__subtitle.header__subtitle_link(href="#") оставить заявку
             .col-12.col-xl-2
-                a.minicart(href="cart.html")
-                    soan.minicart__icon
-                    p.header__title Ваша корзина
-                    p.text-small.text-italic Пока здесь пусто
+                a.header__cart(href="cart.html")
+                    span.header__cart-icon
+                    p.header__cart-title Ваша корзина
+                    p.header__cart-info пока здесь пусто
