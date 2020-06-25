@@ -9,25 +9,75 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        include chunks/header.pug
-        .container
-            .row.justify-content-center
-                .col-12
-                    .item.item_alert.text-center.mb-3
-                        p.item__title.item_alert__title Букеты доступны в размере 30, 40 и более см
-                        p.item__content.item_alert__content Любой из букетов в нашем каталоге можно заказать в нужном размере
-                .col-12.col-xl-6
-                    .item.item_category.item_category-flowers.mb-3.mb-xl-0
-                        p.item_category__title Букеты
-                        p.item__content Моно-, мужские и свадебные букеты на любой вкус
-                        p
-                            a.link-arrow(href="category.html") Посмотреть все
-                .col-12.col-xl-6
-                    .item.item_category.item_category-composition
-                        p.item_category__title Композиции
-                        p.item__content В стильных фирменных коробках или корзинках
-                        p
-                            a.link-arrow(href="category.html") Посмотреть все
+        .pt-3
+            include chunks/header.pug
+        section.content-section
+            .container
+                h2.h1.text-center.text-violet.mb-3 Букеты и композиции
+                .row.justify-content-center
+                    .col-12
+                        .item.item_alert.text-center.mb-3
+                            p.item__title.item_alert__title Букеты доступны в размере 30, 40 и более см
+                            p.item__content.item_alert__content Любой из букетов в нашем каталоге можно заказать в нужном размере
+                    .col-12.col-xl-6
+                        .item.item_category.item_category-flowers.mb-3.mb-xl-0
+                            p.item_category__title Букеты
+                            p.item__content Моно-, мужские и свадебные букеты на&nbsp;любой вкус
+                            p
+                                a.link-arrow(href="category.html") Посмотреть все
+                    .col-12.col-xl-6
+                        .item.item_category.item_category-composition
+                            p.item_category__title Композиции
+                            p.item__content В стильных фирменных коробках или&nbsp;корзинках
+                            p
+                                a.link-arrow(href="category.html") Посмотреть все
+        section.content-section.bg-pink-300
+            .container
+                h2.h1.text-center.text-violet.mb-2 Услуги студии
+                p.text-center.content-section__intro Оформление цветами особенных моментов
+                .row
+                    .col-12.col-xl-4.mt-4
+                        .preview.preview_service
+                            .preview_service__img
+                                img.img-fluid(src="../img/pic-1.png")
+                            .preview_service__content
+                                .preview__title Оформление интерьера
+                                .preview__intro создаёт настроение и уют
+                    .col-12.col-xl-4.mt-4
+                        .preview.preview_service
+                            .preview_service__img 
+                                img.img-fluid(src="../img/pic-2.png")
+                            .preview_service__content
+                                .preview__title Праздничное оформление
+                                .preview__intro для идеальной атмосферы
+                    .col-12.col-xl-4.mt-4
+                        .preview.preview_service
+                            .preview_service__img
+                                img.img-fluid(src="../img/pic-3.png")
+                            .preview_service__content
+                                .preview__title Оформление свадьбы
+                                .preview__intro с учётом всех пожеланий
+                    .col-12.col-xl-4.mt-4
+                        .preview.preview_service
+                            .preview_service__img
+                                img.img-fluid(src="../img/pic-4.png")
+                            .preview_service__content
+                                .preview__title Мастер-классы для&nbsp;всех
+                                .preview__intro групповые и персональные
+                    .col-12.col-xl-4.mt-4
+                        .preview.preview_service
+                            .preview_service__img
+                                img.img-fluid(src="../img/pic-5.png")
+                            .preview_service__content
+                                .preview__title Online-курс флористики
+                                .preview__intro в нашей школе дизайна
+                    .col-12.col-xl-4.mt-4
+                        .preview.preview_service
+                            .preview_service__img
+                                img.img-fluid(src="../img/pic-6.png")
+                            .preview_service__content
+                                .preview__title Ритуальная флористика
+                                .preview__intro мы рядом в трудные дни
         include chunks/footer.pug
  
         script(src="./js/jquery.inputmask.js")

@@ -1,0 +1,16 @@
+.preview_service{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &__img{
+        flex: 0 0 120px;
+        max-width: 40%;
+    }
+    &__content{
+        flex: 0 0 calc(100% - 120px);
+        max-width: 60%;
+
+        padding-left: map-get($map: $spacers, $key: 3);
+    }
+}

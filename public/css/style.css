@@ -3334,7 +3334,7 @@ template {
   padding: 30px !important;
 }
 
-.pt-3, .header,
+.pt-3,
 .py-3 {
   padding-top: 30px !important;
 }
@@ -3344,7 +3344,7 @@ template {
   padding-right: 30px !important;
 }
 
-.pb-3, .header,
+.pb-3,
 .py-3 {
   padding-bottom: 30px !important;
 }
@@ -6265,6 +6265,10 @@ html, body {
   box-sizing: inherit;
 }
 
+.bg-pink-300 {
+  background-color: #e4dfdb;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Noto Serif", "Times New Roman", serif;
@@ -6383,10 +6387,22 @@ a.link-arrow:hover, a.link-arrow:focus {
   letter-spacing: 1.6px;
 }
 
+.text-violet {
+  color: #6d4152;
+}
+
+.text-pink {
+  color: #dd5387;
+}
+
+.text-dark {
+  color: #3d3e40;
+}
+
 .item {
   background-color: #fff;
   border-radius: 6px;
-  padding: 30px;
+  padding: 45px;
 }
 
 .item__title {
@@ -6560,6 +6576,47 @@ a.link-arrow:hover, a.link-arrow:focus {
   background: url("../img/logo.svg") no-repeat center/contain;
 }
 
+<<<<<<< HEAD
+=======
+.preview__title {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.preview__intro {
+  font-size: 0.875rem;
+  color: #3d3e40;
+}
+
+.preview_service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.preview_service__img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 120px;
+  flex: 0 0 120px;
+  max-width: 40%;
+}
+
+.preview_service__content {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 calc(100% - 120px);
+  flex: 0 0 calc(100% - 120px);
+  max-width: 60%;
+  padding-left: 30px;
+}
+
+>>>>>>> develop
 .content p {
   font-size: 18px;
   color: #3d3e40;
@@ -6608,4 +6665,14 @@ a.link-arrow:hover, a.link-arrow:focus {
   font-size: 32px;
   position: absolute;
   top: 16px;
+}
+
+.content-section {
+  padding: 60px 0;
+}
+
+.content-section__intro {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #73626d;
 }

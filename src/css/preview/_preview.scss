@@ -1,0 +1,12 @@
+.preview{
+    &__title{
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: map-get($map: $spacers, $key: 2);
+    }
+    &__intro{
+        font-size: $font-size-sm;
+        color: $gray-800;
+    }
+}

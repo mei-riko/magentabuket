@@ -19,6 +19,7 @@
 @import "framework";
 
 @import "text/spacing";
+@import "text/color";
 
 @import "item/item";
 @import "item/alert";
@@ -33,5 +34,11 @@
 @import "header/header";
 @import "logo/logo";
 
+@import "preview/preview";
+@import "preview/service";
+@import "preview/product";
 // Text pages 
-@import "content/content"
+@import "content/content";
+
+// Section Style
+@import "content/section";
