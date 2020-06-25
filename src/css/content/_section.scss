@@ -1,0 +1,9 @@
+.content-section{
+    padding: 60px 0;
+
+    &__intro{
+        font-size: $font-size-sm;
+        line-height: 1.4;
+        color: $gray-600;
+    }
+}

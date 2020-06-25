@@ -1,7 +1,7 @@
 .item{
     background-color: $white;
     border-radius: 6px;
-    padding: map-get($spacers,3);
+    padding: map-get($spacers,4);
 
     &__title{
         text-transform: uppercase;
