@@ -1,14 +1,15 @@
-@function spacing($unit, $base) {
-  @return $unit * $base / 1000;
-}
-
-#sidebar { width: grid-width(5); }
-
-text{
+@function spacing($unit, $return: 'px', $base: 16) {
+    @if $return == 'em' {
+      @return ($unit) / 1000;
+    } @else {
+      @return ($unit * $base) / 1000;
+    }
+  }
+.text{
     &-spacing-50{
-        letter-spacing: spacing( 50, $font-size-base );
+        letter-spacing: spacing(50) + px;
     }
     &-spacing-100{
-        letter-spacing: spacing( 100, $font-size-base );
+        letter-spacing: spacing(100) + px;
     }
 }
