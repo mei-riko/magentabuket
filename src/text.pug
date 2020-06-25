@@ -10,10 +10,10 @@ html(lang="ru")
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include chunks/header.pug
-        .container
+        section.container
             .row.justify-content-center
                 nav.col-12.col-xl-10
-                    ul.breadcrumb.justify-content-center
+                    ul.breadcrumb.justify-content-center.py-3
                         li.breadcrumb-item 
                             a(href="#") Главная
                         li.breadcrumb-item 
@@ -34,17 +34,20 @@ html(lang="ru")
                         li тематику торжества, которая должна отразиться в букете;
                         li дизайн платья невесты, ведь оно также особенное и неповторимое, как и будущий букет;
                         li прическу, которая дополняет образ.
-                .col-12.col-xl-10
-                    .item.item_alert.my-3
-                        .row
-                            .col-5
-                                a(href="./img/test 1.png" data-fancybox data-caption="Caption for single image")
-                                    img(src="./img/test 1.png" alt="")
-                                a(href="./img/test 2.png" data-fancybox data-caption="Caption for single image")
-                                    img(src="./img/test 2.png" alt="")
-                            .col-7
-                                p.item__title ЗАКАЗАТЬ ОФОРМЛЕНИЕ свадьбы или букет невесты
-                                p.item__content.item_alert__content Оставьте заявку и наши флористы свяжутся с Вами.
+        section.content-section
+            .container
+                .row.justify-content-center
+                    .col-12.col-xl-10
+                        .item.item_alert.my-3
+                            .row
+                                .col-5
+                                    a(href="./img/test 1.png" data-fancybox data-caption="Caption for single image")
+                                        img(src="./img/test 1.png" alt="")
+                                    a(href="./img/test 2.png" data-fancybox data-caption="Caption for single image")
+                                        img(src="./img/test 2.png" alt="")
+                                .col-7
+                                    p.item__title Заказать оформление свадьбы или букет невесты
+                                    p.item__content.item_alert__content Оставьте заявку и наши флористы свяжутся с Вами.
         include chunks/footer.pug
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")

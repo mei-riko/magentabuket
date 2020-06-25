@@ -1,6 +1,6 @@
 html,body {
-    font-size: 16px;
-    line-height: 1;
+    font-size: 18px;
+    line-height: 1.2;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
 }
@@ -26,28 +26,27 @@ h1, h2, h3, h4, h5, h6,
     margin-top: map-get($spacers, 3);
 }
 
-.h1,h1{
-    font-size: 2.75rem;
-}
-.h2,h2{
-    font-size: 36px;
-}
-      
-
+.h1,h1{font-size: 44px;}
+.h2,h2{font-size: 36px;}
 .h3,h3{font-size: 30px;}
 .h4,h4{font-size: 26px;}
 .h5,h5{font-size: 22px;}
 .h6,h6{font-size: 18px;}
 
 p {
-    font-family: $font-family-sans-serif;
+    margin-bottom: map-get($spacers, 3);
     &:last-child{
         margin-bottom: 0;
     }
 }
 
 ol, ul{
-    font-size: 18px;    
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: map-get($spacers, 3);
+    &:last-child{
+        margin-bottom: 0;
+    }
 }
 
 
@@ -81,24 +80,29 @@ a{
 }
 
 .blockquote, blockquote{
-    font-size: 18px;
-    font-family: "Noto Serif";
-    color: $violet!important;
-    font-style: italic;
-    line-height: 1.6;
-    background-color: $pink-200;
-    padding: 36px 54px 36px 150px;
     position: relative;
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    color: $violet!important;
+    background-color: $pink-200;
+
+    padding: 36px 54px 36px 150px;
 }
 .blockquote::after, blockquote::after{
     background: url("../img/flower.svg") no-repeat center / contain;
-    height: 100px;
-    width: 100px;
-    display: block;
+
     content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+
     position: absolute;
     left: 25px;
     top: 34px;
+
     opacity: 0.2;
 }
 

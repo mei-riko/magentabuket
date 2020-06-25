@@ -1,40 +1,43 @@
 .content {
   p {
-    font-size: 18px;
+    font-size: $font-size-base;
     color: $gray-800;
     line-height: 1.6;
   }
   .content__intro {
-    font-size: 22px;
-    font-family: "Noto Serif";
-    color: $gray-800;
+    font-family: $font-family-serif;
     font-style: italic;
-    line-height: 1.6;
+    font-size: 22px;
+    color: $gray-800;
     text-align: center;
-    
   }
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6{ 
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6{ 
     text-align: center;
-}
-li {
-  padding-top: 24px;
-}
-ul {
-  list-style: none;
-  li {
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
       position: relative;
-  }
-  li::before {
-      content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-      color: $pink; /* Change the color */
-      font-weight: bold; /* If you want it to be bold */
-      display: inline-block; /* Needed to add space between the bullet and the text */
-      width: 1em; /* Also needed for space (tweak if needed) */
-      margin-left: -1em; /* Also needed for space (tweak if needed) */
-      font-size: 32px;
-      position: absolute; 
-      top: 16px;     
+      padding-left: map-get($map: $spacers, $key: 3);
+      &:before {
+        display: inline-block;
+        content: "\2022";
+
+        color: $pink;
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 24px;
+
+        position: absolute; 
+        top: 0;
+        left: 0;     
+      }
+
+      & + li{
+          margin-top: map-get($map: $spacers, $key: 1);
+      }
+    }
   }
 }
-}   
