@@ -1,9 +1,22 @@
-.content_intro {
-        font-size: 22px;
-        font-family: "Noto Serif";
-        color: rgb(64, 61, 63);
-        font-style: italic;
-        line-height: 1.545;
-        text-align: center;
-      }
-      
+.content {
+  &__intro {
+    font-size: 22px;
+    font-family: "Noto Serif";
+    color: $gray-800;
+    font-style: italic;
+    line-height: 1.6;
+    text-align: center;
+  }
+  p {
+    font-size: 18px;
+    color: $gray-800;
+    line-height: 1.6;
+  }
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{ 
+    text-align: center;
+}
+li {
+  padding-top: 24px;
+}
+}   
