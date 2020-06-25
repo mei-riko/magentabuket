@@ -5532,11 +5532,7 @@ a.text-dark:hover, a.text-dark:focus {
 .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
   padding-right: 0.5rem;
-<<<<<<< HEAD
-  color: #6c757d;
-=======
   color: #73626d;
->>>>>>> develop
   content: "/";
 }
 
@@ -6272,19 +6268,14 @@ html, body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Noto Serif", "Times New Roman", serif;
-<<<<<<< HEAD
   color: #3d3e40;
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
-  margin-top: 32px;
-=======
-  color: #6d4152;
-  line-height: 1.2;
->>>>>>> develop
+  margin-top: 30px;
 }
 
 .h1, h1 {
@@ -6359,7 +6350,6 @@ a.link-arrow:hover, a.link-arrow:focus {
 .blockquote, blockquote {
   font-size: 18px;
   font-family: "Noto Serif";
-<<<<<<< HEAD
   color: #6d4152 !important;
   font-style: italic;
   line-height: 1.6;
@@ -6378,19 +6368,6 @@ a.link-arrow:hover, a.link-arrow:focus {
   left: 25px;
   top: 34px;
   opacity: 0.2;
-=======
-  color: #6d4152;
-  font-style: italic;
-  line-height: 1.6;
-  background-color: #d6d1cd;
-  padding: 36px 10px 36px 10px;
-}
-
-.blockquote::after, blockquote::after {
-  background-color: #dd5387;
-  height: 100px;
-  width: 100px;
->>>>>>> develop
 }
 
 .tooltip-inner {
@@ -6465,21 +6442,6 @@ a.link-arrow:hover, a.link-arrow:focus {
 .item_temporary {
   border-radius: 0;
   width: 100%;
-<<<<<<< HEAD
-}
-
-.breadcrumb {
-  background-color: inherit;
-  font-size: 14px;
-}
-
-.breadcrumb-item a {
-  color: #6d4152;
-}
-
-.breadcrumb-item.active {
-  color: #d6d1cd;
-=======
   font-size: 0.875rem;
 }
 
@@ -6515,7 +6477,19 @@ a.link-arrow:hover, a.link-arrow:focus {
   z-index: 11;
   background-color: #fbf7f4;
   padding: 20px 0;
->>>>>>> develop
+}
+
+.breadcrumb {
+  background-color: inherit;
+  font-size: 14px;
+}
+
+.breadcrumb-item a {
+  color: #6d4152;
+}
+
+.breadcrumb-item.active {
+  color: #d6d1cd;
 }
 
 .header__title {
@@ -6586,14 +6560,8 @@ a.link-arrow:hover, a.link-arrow:focus {
   background: url("../img/logo.svg") no-repeat center/contain;
 }
 
-<<<<<<< HEAD
 .content p {
   font-size: 18px;
-=======
-.content .content__intro {
-  font-size: 22px;
-  font-family: "Noto Serif";
->>>>>>> develop
   color: #3d3e40;
   line-height: 1.6;
 }
