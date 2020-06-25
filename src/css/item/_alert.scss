@@ -1,10 +1,11 @@
 .item_alert{
     background-color: $pink-300;
     .item_alert__title{
-        color: $pink;
+        margin-bottom: 10px;
     }
     .item_alert__content{
         color: $gray-600;
+        margin-bottom: 20px;
     }
 
     &--light{

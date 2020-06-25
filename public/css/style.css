@@ -6414,6 +6414,26 @@ a.link-inverse:hover, a.link-inverse:focus {
   transform: translateY(50%);
 }
 
+.btn_action {
+  width: 240px;
+  max-width: 100%;
+  background-color: #dd5387;
+  color: #fbf7f4;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 4px;
+}
+
+.btn_action:hover, .btn_action:focus {
+  background-color: #be265f;
+  color: #fbf7f4;
+}
+
 .text-spacing-50 {
   letter-spacing: 0.8px;
 }
@@ -6455,7 +6475,7 @@ a.link-inverse:hover, a.link-inverse:focus {
 
 .item__image {
   display: block;
-  max-width: calc(100% - 25px);
+  max-width: calc(100% - 10px);
   height: auto !important;
 }
 
@@ -6464,11 +6484,12 @@ a.link-inverse:hover, a.link-inverse:focus {
 }
 
 .item_alert .item_alert__title {
-  color: #dd5387;
+  margin-bottom: 10px;
 }
 
 .item_alert .item_alert__content {
   color: #73626d;
+  margin-bottom: 20px;
 }
 
 .item_alert--light {
