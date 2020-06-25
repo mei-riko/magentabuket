@@ -13,6 +13,9 @@
 
         &_link{
             display: block;
+            &:hover, &:focus{
+                color: $link-hover-color;
+            }
         }
     }
     &__subtitle{
@@ -26,5 +29,35 @@
                 text-decoration: underline;
             }
         }
+    }
+
+    &__cart{
+        position: relative;
+        display: block;
+        padding-left: 40px;
+    }
+    &__cart-icon{
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 30px;
+        height: 30px;
+        background: $pink-200 url("../img/bag.svg") no-repeat center / 16px;
+    }
+    &__cart-title{
+        text-transform: uppercase;
+        color: $violet;
+        line-height: 1.1;
+        font-size: $font-size-sm;
+        font-weight: 800;
+        margin-bottom: 4px;
+    }
+    &__cart-info{
+        font-family: $font-family-serif;
+        font-style: italic;
+        font-size: 12px;
+
+        color: $gray-800;
     }
 }
