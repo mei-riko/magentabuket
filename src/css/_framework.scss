@@ -14,12 +14,14 @@ html,body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{ 
     font-family: $font-family-serif;
-    color:$violet;
+    color: $gray-800;
     line-height: 1.2;
+    margin-bottom: map-get($spacers, 2);
 }
 
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
 * + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6{
+    margin-top: map-get($spacers, 3);
 }
 
 .h1,h1{
@@ -46,6 +48,7 @@ ol, ul{
     font-size: 18px;    
 }
 
+
 a{
     text-decoration: none;
     transition: $transition-base;
@@ -64,16 +67,23 @@ a{
 .blockquote, blockquote{
     font-size: 18px;
     font-family: "Noto Serif";
-    color: $violet;
+    color: $violet!important;
     font-style: italic;
     line-height: 1.6;
-    background-color: $pink-400;
-    padding: 36px 10px 36px 10px;
+    background-color: $pink-200;
+    padding: 36px 54px 36px 150px;
+    position: relative;
 }
 .blockquote::after, blockquote::after{
- background-color: $pink;
- height: 100px;
- width: 100px;
+    background: url("../img/flower.svg") no-repeat center / contain;
+    height: 100px;
+    width: 100px;
+    display: block;
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 34px;
+    opacity: 0.2;
 }
 
 .tooltip-inner {

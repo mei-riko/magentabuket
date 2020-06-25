@@ -1,0 +1,13 @@
+.breadcrumb {
+    background-color: inherit;
+    font-size: 14px;
+    &-item {
+        a {
+            color: $violet;
+        }
+        &.active {
+            color: $pink-400;
+
+        }
+    }
+}

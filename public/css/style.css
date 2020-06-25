@@ -1647,11 +1647,7 @@ template {
   }
 }
 
-<<<<<<< HEAD
-@media (min-width: 19200px) {
-=======
 @media (min-width: 1920px) {
->>>>>>> develop
   .col-hd {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -4930,11 +4926,7 @@ template {
   }
 }
 
-<<<<<<< HEAD
-@media (min-width: 19200px) {
-=======
 @media (min-width: 1920px) {
->>>>>>> develop
   .m-hd-0 {
     margin: 0 !important;
   }
@@ -5279,75 +5271,8 @@ template {
   }
 }
 
-<<<<<<< HEAD
-.breadcrumb {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  list-style: none;
-  background-color: #e9ecef;
-  border-radius: 0.25rem;
-}
-
-.breadcrumb-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.breadcrumb-item + .breadcrumb-item {
-  padding-left: 0.5rem;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-  display: inline-block;
-  padding-right: 0.5rem;
-  color: #6c757d;
-  content: "/";
-}
-
-.breadcrumb-item + .breadcrumb-item:hover::before {
-  text-decoration: underline;
-}
-
-.breadcrumb-item + .breadcrumb-item:hover::before {
-  text-decoration: none;
-}
-
-.breadcrumb-item.active {
-  color: #6c757d;
-}
-
-.tooltip {
-  position: absolute;
-  z-index: 1070;
-  display: block;
-  margin: 0;
-  font-family: "Golos", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-  text-align: start;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: normal;
-  word-break: normal;
-  word-spacing: normal;
-  white-space: normal;
-  line-break: auto;
-  font-size: 0.875rem;
-  word-wrap: break-word;
-  opacity: 0;
-=======
 .text-monospace {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
->>>>>>> develop
 }
 
 .text-justify {
@@ -5465,37 +5390,6 @@ template {
   font-weight: 400 !important;
 }
 
-<<<<<<< HEAD
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Noto Serif", "Times New Roman", serif;
-  color: #6d4152;
-  line-height: 1.2;
-}
-
-.h1, h1 {
-  font-size: 2.75rem;
-}
-
-.h2, h2 {
-  font-size: 36px;
-}
-
-.h3, h3 {
-  font-size: 30px;
-}
-
-.h4, h4 {
-  font-size: 26px;
-}
-
-.h5, h5 {
-  font-size: 22px;
-}
-
-.h6, h6 {
-  font-size: 18px;
-=======
 .font-weight-bold, .header__item {
   font-weight: 800 !important;
 }
@@ -5633,60 +5527,15 @@ a.text-dark:hover, a.text-dark:focus {
 
 .breadcrumb-item + .breadcrumb-item {
   padding-left: 0.5rem;
->>>>>>> develop
 }
 
-p {
-  font-family: "Golos", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  color: #6c757d;
+  content: "/";
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-
-ol, ul {
-  font-size: 18px;
-}
-
-<<<<<<< HEAD
-a {
-  text-decoration: none;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
-}
-
-a:hover, a:focus {
-  text-decoration: none;
-}
-
-.img-fluid {
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-.blockquote, blockquote {
-  font-size: 18px;
-  font-family: "Noto Serif";
-  color: #6d4152;
-  font-style: italic;
-  line-height: 1.6;
-  background-color: #d6d1cd;
-  padding: 36px 10px 36px 10px;
-}
-
-.blockquote::after, blockquote::after {
-  background-color: #dd5387;
-  height: 100px;
-  width: 100px;
-}
-
-.tooltip-inner {
-  font-size: 12px;
-  line-height: 16px;
-=======
 .breadcrumb-item + .breadcrumb-item:hover::before {
   text-decoration: underline;
 }
@@ -5973,7 +5822,6 @@ a:hover, a:focus {
 .navbar-nav .dropdown-menu {
   position: static;
   float: none;
->>>>>>> develop
 }
 
 .navbar-text {
@@ -6266,10 +6114,6 @@ a:hover, a:focus {
   justify-content: flex-start;
 }
 
-<<<<<<< HEAD
-text-spacing-100 {
-  letter-spacing: 0.1rem;
-=======
 .navbar-expand > .container,
 .navbar-expand > .container-fluid, .navbar-expand > .container-sm, .navbar-expand > .container-md, .navbar-expand > .container-lg, .navbar-expand > .container-xl {
   padding-right: 0;
@@ -6424,6 +6268,14 @@ html, body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Noto Serif", "Times New Roman", serif;
+  color: #3d3e40;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6,
+* + .h1, * + .h2, * + .h3, * + .h4, * + .h5, * + .h6 {
+  margin-top: 32px;
 }
 
 .h1, h1 {
@@ -6431,23 +6283,23 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .h2, h2 {
-  font-size: 2.5rem;
+  font-size: 36px;
 }
 
 .h3, h3 {
-  font-size: 2rem;
+  font-size: 30px;
 }
 
 .h4, h4 {
-  font-size: 1.75rem;
+  font-size: 26px;
 }
 
 .h5, h5 {
-  font-size: 1.5rem;
+  font-size: 22px;
 }
 
 .h6, h6 {
-  font-size: 1.25rem;
+  font-size: 18px;
 }
 
 p {
@@ -6456,6 +6308,10 @@ p {
 
 p:last-child {
   margin-bottom: 0;
+}
+
+ol, ul {
+  font-size: 18px;
 }
 
 a {
@@ -6474,6 +6330,29 @@ a:hover, a:focus {
   height: auto;
   margin: 0 auto;
   max-width: 100%;
+}
+
+.blockquote, blockquote {
+  font-size: 18px;
+  font-family: "Noto Serif";
+  color: #6d4152 !important;
+  font-style: italic;
+  line-height: 1.6;
+  background-color: #f8f1ed;
+  padding: 36px 54px 36px 150px;
+  position: relative;
+}
+
+.blockquote::after, blockquote::after {
+  background: url("../img/flower.svg") no-repeat center/contain;
+  height: 100px;
+  width: 100px;
+  display: block;
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 34px;
+  opacity: 0.2;
 }
 
 .tooltip-inner {
@@ -6497,7 +6376,19 @@ a:hover, a:focus {
 .item_temporary {
   border-radius: 0;
   width: 100%;
->>>>>>> develop
+}
+
+.breadcrumb {
+  background-color: inherit;
+  font-size: 14px;
+}
+
+.breadcrumb-item a {
+  color: #6d4152;
+}
+
+.breadcrumb-item.active {
+  color: #d6d1cd;
 }
 
 .header__title {
@@ -6568,19 +6459,19 @@ a:hover, a:focus {
   background: url("../img/logo.svg") no-repeat center/contain;
 }
 
-.content__intro {
+.content p {
+  font-size: 18px;
+  color: #3d3e40;
+  line-height: 1.6;
+}
+
+.content .content__intro {
   font-size: 22px;
   font-family: "Noto Serif";
   color: #3d3e40;
   font-style: italic;
   line-height: 1.6;
   text-align: center;
-}
-
-.content p {
-  font-size: 18px;
-  color: #3d3e40;
-  line-height: 1.6;
 }
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6,
@@ -6590,4 +6481,30 @@ a:hover, a:focus {
 
 .content li {
   padding-top: 24px;
+}
+
+.content ul {
+  list-style: none;
+}
+
+.content ul li {
+  position: relative;
+}
+
+.content ul li::before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #dd5387;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+  font-size: 32px;
+  position: absolute;
+  top: 16px;
 }
