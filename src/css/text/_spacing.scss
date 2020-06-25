@@ -1,0 +1,14 @@
+@function spacing($unit, $base) {
+  @return $unit * $base / 1000;
+}
+
+#sidebar { width: grid-width(5); }
+
+text{
+    &-spacing-50{
+        letter-spacing: spacing( 50, $font-size-base );
+    }
+    &-spacing-100{
+        letter-spacing: spacing( 100, $font-size-base );
+    }
+}

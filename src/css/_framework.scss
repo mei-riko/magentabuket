@@ -4,6 +4,7 @@ html,body {
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
 }
+
 *,
 *::before,
 *::after {
@@ -43,11 +44,6 @@ a{
     }
 }
 
-.text{
-    &-right{text-align: right;}
-    &-center{text-align: center;}
-    &-left{text-align: left;}
-}
 .img-fluid{
     display: block;
     height: auto;
@@ -63,36 +59,13 @@ a{
 }
 
 @media all and (min-width: map-get($grid-breakpoints, 'sm')){
-    .text-sm{
-        &-left{text-align: left;}
-        &-center{text-align: center;}
-        &-right{text-align: right;}
-    }
 }
 @media all and (min-width: map-get($grid-breakpoints, 'md')){
-    .text-md{
-        &-left{text-align: left;}
-        &-center{text-align: center;}
-        &-right{text-align: right;}
-    }
 }
 @media all and (min-width: map-get($grid-breakpoints, 'lg')){
-    .text-lg{
-        &-left{text-align: left;}
-        &-center{text-align: center;}
-        &-right{text-align: right;}
-    }
 }
 @media all and (min-width: map-get($grid-breakpoints, 'xl')){
-    .text-xl{
-        &-left{text-align: left;}
-        &-center{text-align: center;}
-        &-right{text-align: right;}
-    }
 }
 
 @media all and (min-width: 1920px){
-    html,body {
-        font-size: 18px;
-    }
 }
