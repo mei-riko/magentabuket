@@ -17,6 +17,7 @@
 @import "node_modules/bootstrap/scss/navbar";
 
 @import "framework";
+@import "other/button";
 
 @import "text/spacing";
 @import "text/color";
@@ -37,6 +38,7 @@
 @import "preview/preview";
 @import "preview/service";
 @import "preview/product";
+
 // Text pages 
 @import "content/content";
 

@@ -51,6 +51,7 @@ ol, ul{
 
 
 a{
+    display: inline-block;
     text-decoration: none;
     transition: $transition-base;
     &:hover, &:focus{
@@ -68,6 +69,14 @@ a{
             color: $link-hover-color;
             text-decoration: none;
             background-position-x: 100%;
+        }
+    }
+    &.link-inverse{
+        color: $gray-800;
+        text-decoration: underline;
+        
+        &:hover, &:focus{
+            color: $link-hover-color;
         }
     }
 }
@@ -101,7 +110,7 @@ a{
 
     position: absolute;
     left: 25px;
-    top: 34px;
+    top: calc(50% - 50px);
 
     opacity: 0.2;
 }

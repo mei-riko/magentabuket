@@ -4,9 +4,16 @@
         font-weight: 800;
         line-height: 1.2;
         margin-bottom: map-get($map: $spacers, $key: 2);
+
+        &_link{
+            color: $gray-800;
+            &:hover, &:focus{
+                color: $link-hover-color;
+            }
+        }
     }
     &__intro{
         font-size: $font-size-sm;
-        color: $gray-800;
+        color: $gray-600;
     }
 }

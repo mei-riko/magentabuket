@@ -1,0 +1,30 @@
+.preview_product{
+    text-align: center;
+    &__image{
+        display: block;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &:before{
+            content:'';
+            display: block;
+            width: 100%;
+            padding-top: 100%;
+        }
+    }
+    &__category{
+        display: block;
+        font-size: $font-size-sm;
+        line-height: 1.2;
+        margin-top: map-get($map: $spacers, $key: 4);
+        margin-bottom: map-get($map: $spacers, $key: 1);
+    }
+    &__price{
+        display: block;
+        font-size: $font-size-sm;
+        line-height: 1.2;
+        margin: 0;
+    }
+}

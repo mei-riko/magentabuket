@@ -10,6 +10,9 @@
     font-size: 22px;
     color: $gray-800;
     text-align: center;
+
+    margin-top: map-get($map: $spacers, $key: 3);
+    margin-bottom: map-get($map: $spacers, $key: 5);
   }
   h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6{ 

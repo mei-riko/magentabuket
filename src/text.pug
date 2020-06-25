@@ -9,7 +9,8 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        include chunks/header.pug
+        .pt-3
+            include chunks/header.pug
         section.container
             .row.justify-content-center
                 nav.col-12.col-xl-10
@@ -39,15 +40,17 @@ html(lang="ru")
                 .row.justify-content-center
                     .col-12.col-xl-10
                         .item.item_alert.my-3
-                            .row
-                                .col-5
-                                    a(href="./img/test 1.png" data-fancybox data-caption="Caption for single image")
-                                        img(src="./img/test 1.png" alt="")
-                                    a(href="./img/test 2.png" data-fancybox data-caption="Caption for single image")
-                                        img(src="./img/test 2.png" alt="")
+                            .row.align-items-center
+                                .col-5.row.no-gutters.justify-content-between
+                                    a.col-6(href="./img/test 1.png" data-fancybox data-caption="Caption for single image")
+                                        img.item__image(src="./img/test 1.png" alt="")
+                                    a.col-6(href="./img/test 2.png" data-fancybox data-caption="Caption for single image")
+                                        img.item__image(src="./img/test 2.png" alt="")
                                 .col-7
                                     p.item__title Заказать оформление свадьбы или букет невесты
                                     p.item__content.item_alert__content Оставьте заявку и наши флористы свяжутся с Вами.
+                                    p
+                                        a.btn.btn_action(href="#") Оставить заявку
         include chunks/footer.pug
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
