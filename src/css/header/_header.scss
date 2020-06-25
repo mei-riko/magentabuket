@@ -6,7 +6,7 @@
         text-transform: uppercase;
         color: $violet;
         line-height: 1.1;
-        font-size: $font-size-sm;
+        font-size: $font-size-base;
         font-weight: 800;
 
         @extend .mb-1;
@@ -21,7 +21,7 @@
     &__subtitle{
         color: $violet;
         line-height: 1.1;
-        font-size: 12px;
+        font-size: 14px;
 
         &_link{
             text-decoration: underline;
@@ -29,6 +29,11 @@
                 text-decoration: underline;
             }
         }
+    }
+    &__item{
+        @extend .text-center;
+        @extend .font-weight-bold;
+        @extend .text-spacing-100;
     }
 
     &__cart{
@@ -49,14 +54,14 @@
         text-transform: uppercase;
         color: $violet;
         line-height: 1.1;
-        font-size: $font-size-sm;
+        font-size: $font-size-base;
         font-weight: 800;
         margin-bottom: 4px;
     }
     &__cart-info{
         font-family: $font-family-serif;
         font-style: italic;
-        font-size: 12px;
+        @extend .mb-0;
 
         color: $gray-800;
     }
