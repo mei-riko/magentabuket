@@ -12,8 +12,22 @@ html(lang="ru")
         include chunks/header.pug
         .container
             .row.justify-content-center
-                .col-8.text-center
-                    p Привет
+                .col-12
+                    .item.item_alert.text-center.mb-3
+                        p.item__title.item_alert__title Букеты доступны в размере 30, 40 и более см
+                        p.item__content.item_alert__content Любой из букетов в нашем каталоге можно заказать в нужном размере
+                .col-12.col-xl-6
+                    .item.item_category.item_category-flowers.mb-3.mb-xl-0
+                        p.item_category__title Букеты
+                        p.item__content Моно-, мужские и свадебные букеты на любой вкус
+                        p
+                            a.link-arrow(href="category.html") Посмотреть все
+                .col-12.col-xl-6
+                    .item.item_category.item_category-composition
+                        p.item_category__title Композиции
+                        p.item__content В стильных фирменных коробках или корзинках
+                        p
+                            a.link-arrow(href="category.html") Посмотреть все
         include chunks/footer.pug
  
         script(src="./js/jquery.inputmask.js")

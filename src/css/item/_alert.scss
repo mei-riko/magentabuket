@@ -1,0 +1,9 @@
+.item_alert{
+    background-color: $pink-300;
+    .item_alert__title{
+        color: $pink;
+    }
+    .item_alert__content{
+        color: $gray-600;
+    }
+}

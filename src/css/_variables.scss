@@ -11,8 +11,6 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
 $gray-900:  #212529 !default;
 $black:    #000 !default;
 
@@ -23,6 +21,8 @@ $pink-300:  #e4dfdb;
 $pink-400:  #d6d1cd;
 $pink:      #dd5387;
 $violet:    #6d4152;
+$gray-600:  #73626d !default;
+$gray-700:  #57494f !default;
 $gray-800:  #3d3e40;
 
 $grays: () !default;
@@ -144,7 +144,7 @@ $enable-deprecation-messages:                 true !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: 16px !default;
+$spacer: 15px !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
