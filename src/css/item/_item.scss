@@ -1,3 +1,15 @@
 .item{
-    
+    background-color: $white;
+    border-radius: 6px;
+    padding: map-get($spacers,3);
+
+    &__title{
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 30px; 
+    }
+    &__content{
+        font-size: $font-size-sm;
+        line-height: 1.4;
+    }
 }

@@ -1,0 +1,21 @@
+.item_category{
+    background-color: $pink-400;
+    padding-top: map-get($map: $spacers, $key: 5);
+    padding-bottom: map-get($map: $spacers, $key: 5);
+    padding-left: 50%;
+
+    &__title{
+        font-size: $font-size-lg;
+        font-weight: 800;
+        color: $gray-800;
+        margin-bottom: map-get($map: $spacers, $key: 2);
+    }
+
+    // Background Category
+    &-flowers{
+        background: $pink-400 url("../img/flowers.png") no-repeat left top / cover;
+    }
+    &-composition{
+        background: $pink-400 url("../img/composition.png") no-repeat left top / cover;
+    }
+}

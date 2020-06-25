@@ -1,5 +1,5 @@
 .content {
-  &__intro {
+  .content__intro {
     font-size: 22px;
     font-family: "Noto Serif";
     color: $gray-800;
@@ -12,11 +12,11 @@
     color: $gray-800;
     line-height: 1.6;
   }
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6{ 
-    text-align: center;
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6{ 
+      text-align: center;
+  }
+  li {
+    padding-top: 24px;
+  }
 }
-li {
-  padding-top: 24px;
-}
-}   

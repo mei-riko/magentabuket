@@ -1,0 +1,12 @@
+.nav{
+    &-item{
+        padding: 10px 20px;
+    }
+    &-link{
+        font-size: $font-size-sm;
+        background: $pink-200;
+        color: $violet;
+
+        padding: 6px 12px;
+    }
+}
