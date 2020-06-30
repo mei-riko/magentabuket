@@ -19,24 +19,10 @@
     text-align: center;
   }
   ul {
-    list-style: none;
-    padding-left: 0;
+    @extend .list;
     li {
-      position: relative;
-      padding-left: map-get($map: $spacers, $key: 3);
-      &:before {
-        display: inline-block;
-        content: "\2022";
-
-        color: $pink;
-        font-size: 28px;
-        font-weight: bold;
-        line-height: 24px;
-
-        position: absolute; 
-        top: 0;
-        left: 0;     
-      }
+      @extend .list__item;
+      @extend .list__item_circle;
 
       & + li{
           margin-top: map-get($map: $spacers, $key: 1);

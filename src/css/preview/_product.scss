@@ -6,6 +6,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
 
         &:before{
             content:'';
@@ -14,11 +15,17 @@
             padding-top: 100%;
         }
     }
+    &__btn{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform:translateX(-50%) translateY(50%) ;
+    }
     &__category{
         display: block;
         font-size: $font-size-sm;
         line-height: 1.2;
-        margin-top: map-get($map: $spacers, $key: 4);
+        margin-top: map-get($map: $spacers, $key: 5);
         margin-bottom: map-get($map: $spacers, $key: 1);
     }
     &__price{

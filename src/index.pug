@@ -11,42 +11,72 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         .pt-3
             include chunks/header.pug
+        section.slider.slider_header#slider-index
+            .slider__item.slider_header__item(style="background-image: url('../img/slider-01.png');")
+                .slider_header__content
+                    p.slider_header__title Новая летняя коллекция букетов
+                    .slider_header__text
+                        p Потрясающие букеты от 1900 руб.!
+                        a.btn.btn_action.text-spacing-100(href="#") Посмотреть всё
+            .slider__item.slider_header__item()
+                .slider_header__content
+                    p.slider_header__title Коллекция монобукетов
+                    .slider_header__text
+                        p Потрясающие букеты от 1900 руб.!
+                        a.btn.btn_action.text-spacing-100(href="#") Посмотреть всё
         section.content-section
             .container
                 h2.h1.text-center.text-violet.mb-3 Букеты и композиции
-                .row
-                    .col-6.col-xl-3.mb-3
+                .btn-group.d-flex.justify-content-center.mb-3
+                    a.btn.btn_arrow-prev.product-prev(href="#" data-trigger="click")
+                    a.btn.btn_arrow-next.product-next(href="#" data-trigger="click")
+                .slider.slider_product
+                    .slider__item.slider_product__item
                         .preview.preview_product
                             a.preview_product__image(href="product.html" style="background-image: url('../img/product-1.png');")
-                                button.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
+                                button.preview_product__btn.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
                             a.preview_product__category(href="category.html") Монобукеты
                             a.preview__title.preview__title_link(href="product.html") «Эстер»
                             p.preview_product__price от 4 420 ₽
-                    .col-6.col-xl-3.mb-3
+                    .slider__item.slider_product__item
                         .preview.preview_product
                             a.preview_product__image(href="product.html" style="background-image: url('../img/product-2.png');")
-                                button.btn.btn_add-to-cart.btn_add-to-cart--active(data-toggle="tooltip" data-placement="top" title="Убрать из корзины")
+                                button.preview_product__btn.btn.btn_add-to-cart.btn_add-to-cart--active(data-toggle="tooltip" data-placement="top" title="Убрать из корзины")
                             a.preview_product__category(href="category.html") Мужские букеты
                             a.preview__title.preview__title_link(href="product.html") «Ароматная сирень»
                             p.preview_product__price от 4 420 ₽
-                    .col-6.col-xl-3.mb-3
+                    .slider__item.slider_product__item
                         .preview.preview_product
                             a.preview_product__image(href="product.html" style="background-image: url('../img/product-3.png');")
-                                button.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
+                                button.preview_product__btn.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
                             a.preview_product__category(href="category.html") Монобукеты
                             a.preview__title.preview__title_link(href="product.html") «Всё для тебя»
                             p.preview_product__price от 4 420 ₽
-                    .col-6.col-xl-3.mb-3
+                    .slider__item.slider_product__item
                         .preview.preview_product
                             a.preview_product__image(href="product.html" style="background-image: url('../img/product-4.png');")
-                                button.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
+                                button.preview_product__btn.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
                             a.preview_product__category(href="category.html") Монобукеты
                             a.preview__title.preview__title_link(href="product.html") «Патрисия»
+                            p.preview_product__price от 4 420 ₽
+                    .slider__item.slider_product__item
+                        .preview.preview_product
+                            a.preview_product__image(href="product.html" style="background-image: url('../img/product-2.png');")
+                                button.preview_product__btn.btn.btn_add-to-cart.btn_add-to-cart--active(data-toggle="tooltip" data-placement="top" title="Убрать из корзины")
+                            a.preview_product__category(href="category.html") Мужские букеты
+                            a.preview__title.preview__title_link(href="product.html") «Ароматная сирень»
+                            p.preview_product__price от 4 420 ₽
+                    .slider__item.slider_product__item
+                        .preview.preview_product
+                            a.preview_product__image(href="product.html" style="background-image: url('../img/product-1.png');")
+                                button.preview_product__btn.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
+                            a.preview_product__category(href="category.html") Монобукеты
+                            a.preview__title.preview__title_link(href="product.html") «Эстер»
                             p.preview_product__price от 4 420 ₽
                 .row.justify-content-center
                     .col-12
                         .item.item_alert.text-center.my-3
-                            p.item__title.item_alert__title Букеты доступны в размере 30, 40 и более см
+                            p.item__title.item_alert__title.text-pink Букеты доступны в размере 30, 40 и более см
                             p.item__content.item_alert__content Любой из букетов в нашем каталоге можно заказать в нужном размере
                     .col-12.col-xl-6
                         .item.item_category.item_category-flowers.mb-3.mb-xl-0
@@ -118,9 +148,45 @@ html(lang="ru")
                                 img.item__image(src="./img/test-small-3.png" alt="")
                         .col-8
                             p.item__title Реализованные флористами 
-                                a.link-inverse(href="#") проекты 
+                                a.link-inverse.link-underline(href="#") проекты 
                             p.item__content.item_alert__content Оформление интерьеров, ваших особенных событий и многое другое.
+        section.content-section
+            .container
+                .row.justify-content-between.align-items-center
+                    .col-12.col-xl-5
+                        .content-section__images
+                            .content-section__image-up(style="background-image: url('../img/img-1.png');")
+                            .content-section__image-down(style="background-image: url('../img/img-2.png');")
+                    .col-12.col-xl-6
+                        p.content-section__annotation Студия цветов «Маджента» – мир чувств в букетах! Цветы могут сказать гораздо больше cлов. Правильно подобранный букет выражает все надежды и мечты.
+                        p.content-section__list-title Только свежие цветы
+                        p.content-section__list-content Мы предлагаем лишь качественный и свежий цветок, поэтому букеты будут радовать вас не один день, не теряя своей свежести и привлекательности
+                        p.content-section__list-title Только свежие цветы
+                        p.content-section__list-content Мы предлагаем лишь качественный и свежий цветок, поэтому букеты будут радовать вас не один день, не теряя своей свежести и привлекательности
+                        p.content-section__list-title Только свежие цветы
+                        p.content-section__list-content Мы предлагаем лишь качественный и свежий цветок, поэтому букеты будут радовать вас не один день, не теряя своей свежести и привлекательности
+        section.content-section.bg-pink-300
+            .container
+                ol.list.list_numeric.row
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small.mt-4 Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small.mt-4 Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small.mt-4 Создание авторских букетов и цветочных композиций на любой вкус
+        include chunks/instagram.pug
+        aside.bg-pink-300
+            .container
+                .item.item_alert.text-center
+                    p.item__title.item_alert__title.text-violet Подпишитесь на нас в instagram
+                    p.item__content.item_alert__content 
+                        a.text-serif.text-italic(href="#") @magenta_buket
+        aside.map(style="position:relative;overflow:hidden;")
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9fedb3162965a729bf93422b219eed0cbf23d407a887b1d3dbebacf3aa6e74d2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
         include chunks/footer.pug
- 
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
+        script(src="./js/slick.min.js")
+
         script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")

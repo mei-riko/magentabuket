@@ -1,0 +1,53 @@
+.list{
+    list-style: none;
+    padding-left: 0;
+    &__item{
+        position: relative;
+        padding-left: map-get($map: $spacers, $key: 3);
+        &_circle{
+            &:before {
+                display: inline-block;
+                content: "\2022";
+        
+                color: $pink;
+                font-size: 28px;
+                font-weight: bold;
+                line-height: 24px;
+        
+                position: absolute; 
+                top: 0;
+                left: 0;     
+            }
+        }
+        &_numeric-small{
+            font-family: $font-family-serif;
+            font-style: italic;
+            font-size: $font-size-sm;
+
+            position: relative;
+            padding-left: 120px;
+            padding-right: map-get($spacers,2);
+
+            &:before{
+                counter-increment: list;
+                content: "0"counter(list);
+
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                font-family: $font-family-serif;
+                font-size: 80px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 58px;
+
+                color: $pink-400;
+            }
+        }
+    }
+
+    &_numeric{
+        counter-reset: list;
+    }
+}

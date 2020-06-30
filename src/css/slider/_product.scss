@@ -1,0 +1,7 @@
+.slider_product{
+    margin-left: - map-get($map: $spacers, $key: 2);
+    margin-right: - map-get($map: $spacers, $key: 2);
+    &__item{
+        padding: 0 map-get($map: $spacers, $key: 2);
+    }
+}

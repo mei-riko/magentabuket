@@ -1,0 +1,12 @@
+.slider{
+    &__item{
+        &.slick-slide{
+            height: auto;
+            outline: none;
+            &:hover,
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}

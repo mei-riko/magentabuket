@@ -1,4 +1,13 @@
 .item_information{
     background-color: $violet;
     color: $pink-100;
+
+    &__title{
+        font-size: 44px;
+        margin-bottom: 10px;
+    }
+    &__content{
+        color: $pink-200;
+        font-size: $font-size-sm;
+    }
 }

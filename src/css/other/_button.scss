@@ -10,28 +10,68 @@
         height: 60px;
         margin: 0 auto;
 
-        background: $pink;
+        background: $pink url("../img/plus.svg") no-repeat center / 16px;
         border: 10px solid $pink-200;
 
         transform: translateY(50%);
+        transition: .4s;
+
+        &:hover, &:focus{
+            background: $violet url("../img/plus.svg") no-repeat center / 16px;
+        }
+
+        &--active{
+            background: $white url("../img/checkmark.svg") no-repeat center / 18px;
+            &:hover, &:focus{
+                background: $pink-200 url("../img/checkmark.svg") no-repeat center / 18px;
+            }
+        }
     }
     // pink button on text page made by WuDMC =)
     &_action {
         width: 240px;
         max-width: 100%;
+        
         background-color: $pink;
         color: $pink-100;
+        
         font-size: 16px;
         font-weight: bold;
-        text-transform: uppercase;
         line-height: 1.2;
+
         text-align: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding: 20px 10px;
         border-radius: 4px;
+
         &:hover, &:focus{
             background-color: $link-hover-color;
             color: $pink-100;
+        }
+    }
+
+    // Next & Prev
+    &_arrow-prev{
+        display: block;
+        width: 40px;
+        height: 20px;
+        background: url("../img/arrow-left.svg") no-repeat center / 26px;
+
+        opacity: .6;
+        transition: $carousel-control-transition;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &_arrow-next{
+        display: block;
+        width: 40px;
+        height: 20px;
+        background: url("../img/arrow-right.svg") no-repeat center / 26px;
+
+        opacity: .6;
+        transition: $carousel-control-transition;
+        &:hover{
+            opacity: 1;
         }
     }
 }

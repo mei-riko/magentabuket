@@ -17,30 +17,44 @@
 @import "node_modules/bootstrap/scss/navbar";
 
 @import "framework";
+@import "other/header";
+@import "other/footer";
 @import "other/button";
 
 @import "text/spacing";
 @import "text/color";
+@import "text/style";
+@import "text/link";
 
 @import "item/item";
 @import "item/alert";
 @import "item/information";
 @import "item/category";
+@import "item/content-col";
 @import "item/temporary";
+
+@import "list/list";
 
 @import "nav/nav";
 @import "nav/navbar";
 @import "nav/breadcrumbs";
 
-@import "header/header";
 @import "logo/logo";
+@import "logo/footer";
 
 @import "preview/preview";
 @import "preview/service";
 @import "preview/product";
+
+@import "slider/slider";
+@import "slider/header";
+@import "slider/product";
 
 // Text pages 
 @import "content/content";
 
 // Section Style
 @import "content/section";
+
+// Catalog
+@import "content/catalog";

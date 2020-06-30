@@ -1,0 +1,109 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Section
+        include chunks/head.pug
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        .pt-3
+            include chunks/header.pug
+        section.content-section
+            .container
+                h2.h1.text-center.text-violet.mb-2 Услуги студии
+                p.text-center.content-section__intro.mb-0 Оформление цветами особенных моментов
+                .row
+                    .col-12.col-xl-4.mt-5
+                        .preview.preview_service
+                            .preview_service__img
+                                img.img-fluid(src="../img/pic-1.png")
+                            .preview_service__content
+                                .preview__title Оформление интерьера
+                                .preview__intro создаёт настроение и уют
+                    .col-12.col-xl-4.mt-5
+                        .preview.preview_service
+                            .preview_service__img 
+                                img.img-fluid(src="../img/pic-2.png")
+                            .preview_service__content
+                                .preview__title Праздничное оформление
+                                .preview__intro для идеальной атмосферы
+                    .col-12.col-xl-4.mt-5
+                        .preview.preview_service
+                            .preview_service__img
+                                img.img-fluid(src="../img/pic-3.png")
+                            .preview_service__content
+                                .preview__title Оформление свадьбы
+                                .preview__intro с учётом всех пожеланий
+                    .col-12.col-xl-4.mt-5
+                        .preview.preview_service
+                            .preview_service__img
+                                img.img-fluid(src="../img/pic-4.png")
+                            .preview_service__content
+                                .preview__title Мастер-классы для&nbsp;всех
+                                .preview__intro групповые и персональные
+                    .col-12.col-xl-4.mt-5
+                        .preview.preview_service
+                            .preview_service__img
+                                img.img-fluid(src="../img/pic-5.png")
+                            .preview_service__content
+                                .preview__title Online-курс флористики
+                                .preview__intro в нашей школе дизайна
+                    .col-12.col-xl-4.mt-5
+                        .preview.preview_service
+                            .preview_service__img
+                                img.img-fluid(src="../img/pic-6.png")
+                            .preview_service__content
+                                .preview__title Ритуальная флористика
+                                .preview__intro мы рядом в трудные дни
+                .item.item_alert.item_alert--light.mt-5
+                    .row.align-items-center
+                        .col-4.row.no-gutters.justify-content-between
+                            .col-4
+                                img.item__image(src="./img/test-small-1.png" alt="")
+                            .col-4
+                                img.item__image(src="./img/test-small-2.png" alt="")
+                            .col-4
+                                img.item__image(src="./img/test-small-3.png" alt="")
+                        .col-8
+                            p.item__title Реализованные флористами 
+                                a.link-inverse.link-underline(href="#") проекты 
+                            p.item__content.item_alert__content Оформление интерьеров, ваших особенных событий и многое другое.
+                .row.mt-3
+                    .col-12.col-xl-6
+                        .item.item_category.item_category-flowers.mb-3.mb-xl-0
+                            p.item_category__title Букеты
+                            p.item__content Моно-, мужские и свадебные букеты на&nbsp;любой вкус
+                            p
+                                a.link-arrow(href="category.html") Посмотреть все
+                    .col-12.col-xl-6
+                        .item.item_category.item_category-composition
+                            p.item_category__title Композиции
+                            p.item__content В стильных фирменных коробках или&nbsp;корзинках
+                            p
+                                a.link-arrow(href="category.html") Посмотреть все
+        section.content-section.bg-pink-300
+            .container
+                ol.list.list_numeric.row
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small.mt-4 Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small.mt-4 Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small.mt-4 Создание авторских букетов и цветочных композиций на любой вкус
+        aside.bg-pink-300
+            .container
+                .item.item_alert.text-center
+                    p.item__title.item_alert__title.text-violet Подпишитесь на нас в instagram
+                    p.item__content.item_alert__content 
+                        a.text-serif.text-italic(href="#") @magenta_buket
+        aside.map(style="position:relative;overflow:hidden;")
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9fedb3162965a729bf93422b219eed0cbf23d407a887b1d3dbebacf3aa6e74d2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        include chunks/footer.pug
+        link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+        
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/app.min.js")

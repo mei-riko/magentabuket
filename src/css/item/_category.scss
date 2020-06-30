@@ -1,7 +1,7 @@
 .item_category{
     background-color: $pink-400;
-    padding-top: map-get($map: $spacers, $key: 5);
-    padding-bottom: map-get($map: $spacers, $key: 5);
+    padding-top: map-get($map: $spacers, $key: 4);
+    padding-bottom: map-get($map: $spacers, $key: 4);
     padding-left: 50%;
 
     &__title{

@@ -1,0 +1,15 @@
+.footer{
+    @extend .py-4;
+    background-color: $pink-400;
+
+
+    &__copyright{
+        font-size: 12px;
+        color: $gray-600;
+    }
+    &__link{
+        font-size: 12px;
+        background-color: $pink-200;
+        padding: 4px;
+    }
+}
