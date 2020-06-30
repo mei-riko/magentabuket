@@ -1,0 +1,8 @@
+.gallery{
+    margin-left: -5px;
+    margin-right: -5px;
+    &__item {
+        padding: 5px;
+        @extend .img-fluid;
+    }
+}

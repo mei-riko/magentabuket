@@ -20,6 +20,7 @@
 @import "other/header";
 @import "other/footer";
 @import "other/button";
+@import "other/pagination";
 
 @import "text/spacing";
 @import "text/color";
@@ -49,6 +50,8 @@
 @import "slider/slider";
 @import "slider/header";
 @import "slider/product";
+
+@import "gallery/gallery";
 
 // Text pages 
 @import "content/content";
