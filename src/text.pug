@@ -42,15 +42,43 @@ html(lang="ru")
                         .item.item_alert.my-3
                             .row.align-items-center
                                 .col-5.row.no-gutters.justify-content-between
-                                    a.col-6(href="./img/test 1.png" data-fancybox data-caption="Caption for single image")
+                                    a.col-6(href="./img/test 1.png" data-fancybox="gallery1" data-caption="Caption for single image")
                                         img.item__image(src="./img/test 1.png" alt="")
-                                    a.col-6(href="./img/test 2.png" data-fancybox data-caption="Caption for single image")
+                                    a.col-6(href="./img/test 2.png" data-fancybox="gallery1" data-caption="Caption for single image")
                                         img.item__image(src="./img/test 2.png" alt="")
                                 .col-7
                                     p.item__title.item_alert__title Заказать оформление свадьбы или букет невесты
                                     p.item__content.item_alert__content Оставьте заявку и наши флористы свяжутся с Вами.
                                     p
                                         a.btn.btn_action.text-uppercase(href="#") Оставить заявку
+        section.container
+           .row.justify-content-center
+                .col-12.col-xl-10
+                    h4.h3.text-violet.text-center.mb-3 Фотогалерея
+                    .row.row-cols-4.gallery.no-gutters
+                        a.col(href="./img/foto-1.png" data-fancybox="gallery2" data-caption="Caption for single image")
+                            img.gallery__item(src="./img/foto-1.png" alt="")
+                        a.col(href="./img/foto-2.png" data-fancybox="gallery2" data-caption="Caption for single image")
+                            img.gallery__item(src="./img/foto-2.png" alt="")
+                        a.col(href="./img/foto-3.png" data-fancybox="gallery2" data-caption="Caption for single image")
+                            img.gallery__item(src="./img/foto-3.png" alt="")
+                        a.col(href="./img/foto-4.png" data-fancybox="gallery2" data-caption="Caption for single image")
+                            img.gallery__item(src="./img/foto-4.png" alt="")
+                        a.col(href="./img/foto-1.png" data-fancybox="gallery2" data-caption="Caption for single image")
+                            img.gallery__item(src="./img/foto-1.png" alt="")
+                        a.col(href="./img/foto-2.png" data-fancybox="gallery2" data-caption="Caption for single image")
+                            img.gallery__item(src="./img/foto-2.png" alt="")
+                        a.col(href="./img/foto-3.png" data-fancybox="gallery2" data-caption="Caption for single image")
+                            img.gallery__item(src="./img/foto-3.png" alt="")
+                        a.col(href="./img/foto-4.png" data-fancybox="gallery2" data-caption="Caption for single image")
+                            img.gallery__item(src="./img/foto-4.png" alt="")
+                    nav.pagination.justify-content-center
+                        a.btn.btn_arrow-prev.pagination__prev(href="#")
+                        a.pagination__item(href="#") 1
+                        a.pagination__item(href="#") 2
+                        a.pagination__item.pagination__item--active(href="#") 3
+                        a.pagination__item(href="#") 4
+                        a.btn.btn_arrow-next.pagination__next(href="#")
         aside.bg-pink-300
             .container
                 .item.item_alert.text-center
