@@ -8,6 +8,11 @@
         color: $violet;
 
         padding: 4px 16px;
+
+        &--active{
+            background: $pink;
+            color: $white;
+        }
     }
 
     &_footer{

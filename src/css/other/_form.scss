@@ -2,27 +2,32 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    margin: 0;
+    min-height: 24px;
+
     &__input{
         display: none;
 
         &:checked + .checkbox__label:after {
             content: '';
             display: block;
-            background-color: $red;
+            background-color: $pink;
 
-            width: 5px;
-            height: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
 
             position: absolute;
-            left: 4px;
-            top: 3px;
+            top: 50%;
+            left: 6px;
+            transform: translateY(-50%);
         }
     }
     &__label{
         position: relative;
         margin: 0;
-        padding-left: 28px;
-        line-height: 12px;
+        padding-left: 34px;
+        line-height: 1;
 
         cursor: pointer;
 
@@ -30,36 +35,15 @@
             content:'';
             display: block;
 
-            border: 1px solid $light-grey;
+            border: 1px solid $pink-400;
 
-            width: 13px;
-            height: 13px;
+            width: 24px;
+            height: 24px;
 
             position: absolute;
             left: 0;
-            top: 0;
-        }
-    }
-    &__link{
-        text-decoration: underline;
-    }
-
-    &_large{
-        .checkbox__label{
-            line-height: 22px;
-            &:before{
-                width: 18px;
-                height: 18px;
-            }
-        }
-        .checkbox__input{
-            &:checked + .checkbox__label:after {
-                width: 9px;
-                height: 9px;
-
-                left: 5px;
-                top: 4px;
-            }
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 }
@@ -80,11 +64,11 @@
     .jGrowl-notification {
         width: 320px;
         padding: 40px 20px;
-        border: 1px solid $light-grey;
+        border: 1px solid $pink-400;
         border-radius: 0;
 
         font-size: 14px;
-        color: $dark-grey;
+        color: $gray-800;
 
         .jGrowl-close {
             position: absolute;
@@ -102,7 +86,7 @@
         &.af-message-success {
             background-color: #f9fcf7!important;
             .jGrowl-close {
-                background: $grey;
+                background: $gray-400;
             }
         }
 

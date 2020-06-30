@@ -15,24 +15,37 @@ html(lang="ru")
             .container
                 .row
                     .col-12.col-xl-3
-                        p.catalog__filter-title Категории
-                        a.catalog__category-link.mt(href="") Все букеты
-                        a.catalog__subcategory-link(href="") Монобукеты
-                        a.catalog__subcategory-link(href="") Мужские букеты
-                        a.catalog__subcategory-link(href="") Летние букеты
-                        a.catalog__subcategory-link(href="") Свадебные букеты
+                        p.catalog__title Категории
+                        a.catalog__category.catalog__link.catalog__link--active.mt(href="") Все букеты
+                        a.catalog__subcategory.catalog__link(href="") Монобукеты
+                        a.catalog__subcategory.catalog__link(href="") Мужские букеты
+                        a.catalog__subcategory.catalog__link(href="") Летние букеты
+                        a.catalog__subcategory.catalog__link(href="") Свадебные букеты
 
-                        a.catalog__category-link.mt-3(href="") Все композиции
-                        a.catalog__subcategory-link(href="") Композиции в коробках
-                        a.catalog__subcategory-link(href="") Композиции в букетах
-                        p.catalog__filter-title Фильтры
+                        a.catalog__category.catalog__link.mt-3(href="") Все композиции
+                        a.catalog__subcategory.catalog__link(href="") Композиции в коробках
+                        a.catalog__subcategory.catalog__link(href="") Композиции в букетах
+
+                        p.catalog__title.mt-4 Фильтры
+                        p.catalog__filter-name Цена
+                        p.catalog__filter-name Основа букета
+                        label.checkbox.catalog__checkbox(for="mse2_msoption|tags_0")
+                            input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_0" value="розы")
+                            span.checkbox__label розы
+                        label.checkbox.catalog__checkbox(for="mse2_msoption|tags_1")
+                            input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_1" value="полевые цветы")
+                            span.checkbox__label полевые цветы
+                        label.checkbox.catalog__checkbox(for="mse2_msoption|tags_2")
+                            input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_2" value="полевые цветы")
+                            span.checkbox__label лилии
+                        button.btn.catalog__btn.mt-4 Применить фильтры
                     .col-12.col-xl-9
                         .item.item_information.text-center
                             p.item__title.item_information__title Выбери размер букета сам!
                             p.item__content.item_information__content Любой из наших букетов можно заказать в размере 30 см, 40 см и более см
                         h1.h4.text-violet Букеты
                         ul.breadcrumb
-                            li.breadcrumb-item 
+                            li.breadcrumb-item
                                 a(href="#") Главная
                             li.breadcrumb-item.active Букеты
                         .row

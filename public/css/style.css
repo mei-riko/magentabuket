@@ -6448,11 +6448,120 @@ a:hover, a:focus {
   padding: 4px;
 }
 
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  min-height: 24px;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__input:checked + .checkbox__label:after {
+  content: '';
+  display: block;
+  background-color: #dd5387;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.checkbox__label {
+  position: relative;
+  margin: 0;
+  padding-left: 34px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.checkbox__label:before {
+  content: '';
+  display: block;
+  border: 1px solid #d6d1cd;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.jGrowl {
+  font-family: "Noto Sans";
+}
+
+.jGrowl#jGrowl {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 99;
+}
+
+.jGrowl#jGrowl .jGrowl-notification {
+  width: 320px;
+  padding: 40px 20px;
+  border: 1px solid #d6d1cd;
+  border-radius: 0;
+  font-size: 14px;
+  color: #3d3e40;
+}
+
+.jGrowl#jGrowl .jGrowl-notification .jGrowl-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  line-height: 30px;
+  width: 34px;
+  text-align: center;
+  border-radius: 0 0 0 15px;
+  color: #fff;
+  outline: 0;
+}
+
+.jGrowl#jGrowl .jGrowl-notification.af-message-success {
+  background-color: #f9fcf7 !important;
+}
+
+.jGrowl#jGrowl .jGrowl-notification.af-message-success .jGrowl-close {
+  background: #ced4da;
+}
+
+.jGrowl#jGrowl .jGrowl-notification.af-message-error {
+  background-color: #fef8f8 !important;
+}
+
+.jGrowl#jGrowl .jGrowl-notification.af-message-error .jGrowl-close {
+  background: #df0a0a;
+}
+
 .btn {
   outline: none;
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 .btn_add-to-cart {
@@ -6465,9 +6574,6 @@ a:hover, a:focus {
   -webkit-transform: translateY(50%);
   -ms-transform: translateY(50%);
   transform: translateY(50%);
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
 }
 
 .btn_add-to-cart:hover, .btn_add-to-cart:focus {
@@ -6530,7 +6636,7 @@ a:hover, a:focus {
   opacity: 1;
 }
 
-.text-spacing-50, .catalog__filter-title {
+.text-spacing-50, .catalog__title {
   letter-spacing: 0.8px;
 }
 
@@ -6752,6 +6858,11 @@ a:hover, a:focus {
   background: #f8f1ed;
   color: #6d4152;
   padding: 4px 16px;
+}
+
+.nav-link--active {
+  background: #dd5387;
+  color: #fff;
 }
 
 .nav_footer .nav-item {
@@ -7078,14 +7189,58 @@ a:hover, a:focus {
   padding: 60px 0;
 }
 
-.catalog__filter-title {
+.catalog__title {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
 }
 
-.catalog__category-link {
-  display: block;
-  font-size: 14px;
+.catalog__filter-name {
+  font-size: 16px;
   font-weight: 800;
+}
+
+.catalog__category {
+  font-size: 16px;
+  margin-bottom: 7.5px;
+}
+
+.catalog__subcategory {
+  display: block;
+  font-size: 16px;
+  margin-left: 15px;
+  margin-bottom: 7.5px;
+}
+
+.catalog__link {
+  display: block;
+  color: #3d3e40;
+}
+
+.catalog__link:hover {
+  color: #be265f;
+}
+
+.catalog__link--active {
+  color: #dd5387;
+  font-weight: 800;
+}
+
+.catalog__checkbox {
+  font-size: 16px;
+}
+
+.catalog__checkbox + .catalog__checkbox {
+  margin-top: 15px;
+}
+
+.catalog__btn {
+  font-size: 16px;
+  padding: 12px 20px;
+  background-color: #6d4152;
+  color: #fbf7f4;
+}
+
+.catalog__btn:hover, .catalog__btn:focus {
+  background-color: #dd5387;
 }
