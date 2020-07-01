@@ -1,15 +1,14 @@
 .pagination {
     display: flex;
-    padding-top: 16px;
-    padding-bottom: 98px;
-    .pagination__item {
+    &__item {
         color: $gray-800;
         font-weight: 800;
         padding: 0px 12px;
         &:hover {
             color:$pink;
-            transition: 10ms;
+            transition: $transition-base;
         }
+
         &--active{
             position: relative;
             &::before{
@@ -23,5 +22,10 @@
                 transform: translateX(-50%);
             }
         }
+    }
+
+    &_gallery{
+        margin-top: map-get($map: $spacers, $key: 2);
+        margin-bottom: map-get($map: $spacers, $key: 5);
     }
 }

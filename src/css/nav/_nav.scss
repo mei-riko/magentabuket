@@ -1,17 +1,24 @@
 .nav{
     &-item{
-        padding: 10px 20px;
+        padding: 10px 15px;
+        &:first-child{padding-left: 30px;}
+        &:last-child{padding-right: 30px;}
     }
     &-link{
         font-size: $font-size-sm;
         background: $pink-200;
         color: $violet;
+        border-radius: 4px;
 
         padding: 4px 16px;
 
         &--active{
             background: $pink;
             color: $white;
+
+            &:hover{
+                color: $white;
+            }
         }
     }
 

@@ -1,0 +1,27 @@
+.product{
+    margin:0;
+
+    &__info{
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding-left: calc(100%/24);
+    }
+    &__intro{
+        font-size: $font-size-sm;
+        font-family: $font-family-serif;
+        font-style: italic;
+        line-height: 1.6;
+    }
+    &__price{
+        font-size: 32px;
+        color: $violet;
+    }
+    &__comment{
+        font-size: 14px;
+        color: $gray-600;
+    }
+    &__filter-name{
+        @extend .catalog__title;
+    }
+}

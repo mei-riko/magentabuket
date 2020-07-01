@@ -3,31 +3,64 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title 404
+        title Product Page
         include chunks/head.pug
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        .pt-3
-            include chunks/header.pug
-        section.content-section
+        include chunks/header.pug
+        section.container-fluid
+            nav.mb-3
+                ul.breadcrumb.justify-content-center
+                    li.breadcrumb-item 
+                        a.breadcrumb-link(href="#") Главная
+                    li.breadcrumb-item 
+                        a.breadcrumb-link(href="#") Букеты
+                    li.breadcrumb-item 
+                        a.breadcrumb-link(href="#") Монобукеты
+                    li.breadcrumb-item.active Букет «Диана»   
+            .row.product.mb-5
+                .col-12.col-xl-7
+                    .row
+                        a.col-6(href="../img/01.png" data-fancybox="gallery" data-caption="Caption for single image")
+                            img.img-fluid.product__img(src="../img/01.png")
+                        a.col-6(href="../img/02.png" data-fancybox="gallery" data-caption="Caption for single image")
+                            img.img-fluid.product__img(src="../img/02.png")
+                        a.col-6.mt-3(href="../img/03.png" data-fancybox="gallery" data-caption="Caption for single image")
+                            img.img-fluid.product__img(src="../img/03.png")
+                        a.col-6.mt-3(href="../img/01.png" data-fancybox="gallery" data-caption="Caption for single image")
+                            img.img-fluid.product__img(src="../img/01.png")
+                .col-12.col-xl-4
+                    .product__info
+                        h1 Букет «Диана»
+                        p.product__intro Букет из нежно-розовых пионов сорта «Sarah Bernhardt» со скидкой 15%. Махровый, очень ароматный, плотный пион 
+                            | с большим количеством лепестков и интересными переходами цвета! 
+                        p.product__price.mb-1 4 420 ₽
+                        p.product__comment Курьер доставит по Москве и Подмосковью сегодня или можете забрать из любого нашего салона
+                        p.product__filter-name.mb-2 Размер букета
+                        select.select.select--full.mb-1(name="size")
+                            option(value="20 см") 20 см (диаметр)
+                            option(value="30 см") 30 см (диаметр)
+                            option(value="40 см") 40 см (диаметр)
+                            option(value="размер") другой размер
+                        p.product__comment На фотографиях представлены букеты 
+                            <br/> среднего размера (40 см)
+                        button.btn.btn_cart.btn--full(type=submit) 
+                            span.btn_cart__icon 
+                            | Добавить в корзину
+                        p.product__comment.my-2
+                            a.link-underline.link-inverse(href="delivery.html") Узнать стоимость доставки и самовывоза
+                        button.btn.btn_modal.btn--full(data-fancybox data-src="#quick-order" href="javascript:;") Быстрый заказ
+        section.content-section.bg-pink-300
             .container
-                p.h1.text-pink.text-bold.text-center Упс! Ошибка 404
-                p.text-center Страница удалена или не существует. Проверьте правильность ссылки :-)
-                .row.mt-5
-                    .col-12.col-xl-6
-                        .item.item_category.item_category-flowers.mb-3.mb-xl-0
-                            p.item_category__title Букеты
-                            p.item__content Моно-, мужские и свадебные букеты на&nbsp;любой вкус
-                            p
-                                a.link-arrow(href="category.html") Посмотреть все
-                    .col-12.col-xl-6
-                        .item.item_category.item_category-composition
-                            p.item_category__title Композиции
-                            p.item__content В стильных фирменных коробках или&nbsp;корзинках
-                            p
-                                a.link-arrow(href="category.html") Посмотреть все
+                ol.list.list_numeric.row
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small.mt-4 Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small.mt-4 Создание авторских букетов и цветочных композиций на любой вкус
+                    li.col-6.col-xl-4.list__item.list__item_numeric-small.mt-4 Создание авторских букетов и цветочных композиций на любой вкус
         aside.bg-pink-300
             .container
                 .item.item_alert.text-center
@@ -35,9 +68,9 @@ html(lang="ru")
                     p.item__content.item_alert__content 
                         a.text-serif.text-italic(href="#") @magenta_buket
         aside.map(style="position:relative;overflow:hidden;")
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9fedb3162965a729bf93422b219eed0cbf23d407a887b1d3dbebacf3aa6e74d2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9fedb3162965a729bf93422b219eed0cbf23d407a887b1d3dbebacf3aa6e74d2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
         include chunks/footer.pug
-        
+        .modal.modal_order#quick-order
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
         

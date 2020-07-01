@@ -9,16 +9,15 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        .pt-3
-            include chunks/header.pug
+        include chunks/header.pug
         section.container
             .row.justify-content-center
-                nav.col-12.col-xl-10.pt-3
+                nav.col-12.col-xl-10
                     ul.breadcrumb.justify-content-center
                         li.breadcrumb-item 
-                            a(href="#") Главная
+                            a.breadcrumb-link(href="#") Главная
                         li.breadcrumb-item 
-                            a(href="#") Услуги
+                            a.breadcrumb-link(href="#") Услуги
                         li.breadcrumb-item.active Свадебное оформление цветами                           
                 .col-12.col-xl-10.content.pt-3
                     h1 Свадебное оформление цветами
@@ -72,7 +71,7 @@ html(lang="ru")
                             img.gallery__item(src="./img/foto-3.png" alt="")
                         a.col(href="./img/foto-4.png" data-fancybox="gallery2" data-caption="Caption for single image")
                             img.gallery__item(src="./img/foto-4.png" alt="")
-                    nav.pagination.justify-content-center
+                    nav.pagination.pagination_gallery.justify-content-center
                         a.btn.btn_arrow-prev.pagination__prev(href="#")
                         a.pagination__item(href="#") 1
                         a.pagination__item(href="#") 2

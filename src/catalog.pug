@@ -9,44 +9,43 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        .pt-3
-            include chunks/header.pug
+        include chunks/header.pug
         section.catalog
             .container
                 .row
                     .col-12.col-xl-3
-                        p.catalog__title Категории
+                        p.catalog__title.mb-2 Категории
                         a.catalog__category.catalog__link.catalog__link--active.mt(href="") Все букеты
                         a.catalog__subcategory.catalog__link(href="") Монобукеты
                         a.catalog__subcategory.catalog__link(href="") Мужские букеты
                         a.catalog__subcategory.catalog__link(href="") Летние букеты
                         a.catalog__subcategory.catalog__link(href="") Свадебные букеты
 
-                        a.catalog__category.catalog__link.mt-3(href="") Все композиции
+                        a.catalog__category.catalog__link.mt-2(href="") Все композиции
                         a.catalog__subcategory.catalog__link(href="") Композиции в коробках
                         a.catalog__subcategory.catalog__link(href="") Композиции в букетах
 
-                        p.catalog__title.mt-4 Фильтры
+                        p.catalog__title.mt-3.mb-2 Фильтры
                         p.catalog__filter-name Цена
                         p.catalog__filter-name Основа букета
                         label.checkbox.catalog__checkbox(for="mse2_msoption|tags_0")
                             input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_0" value="розы")
                             span.checkbox__label розы
                         label.checkbox.catalog__checkbox(for="mse2_msoption|tags_1")
-                            input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_1" value="полевые цветы")
+                            input.checkbox__input(checked type="checkbox" name="msoption|tags" id="mse2_msoption|tags_1" value="полевые цветы")
                             span.checkbox__label полевые цветы
                         label.checkbox.catalog__checkbox(for="mse2_msoption|tags_2")
                             input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_2" value="полевые цветы")
                             span.checkbox__label лилии
                         button.btn.catalog__btn.mt-4 Применить фильтры
                     .col-12.col-xl-9
-                        .item.item_information.text-center
+                        .item.item_information.text-center.bg-pink
                             p.item__title.item_information__title Выбери размер букета сам!
                             p.item__content.item_information__content Любой из наших букетов можно заказать в размере 30 см, 40 см и более см
                         h1.h4.text-violet Букеты
                         ul.breadcrumb
                             li.breadcrumb-item
-                                a(href="#") Главная
+                                a.breadcrumb-link(href="#") Главная
                             li.breadcrumb-item.active Букеты
                         .row
                             .col-6.col-xl-4.mt-4
@@ -84,6 +83,13 @@ html(lang="ru")
                                     a.preview_product__category(href="category.html") Монобукеты
                                     a.preview__title.preview__title_link(href="product.html") «Эстер»
                                     p.preview_product__price от 4 420 ₽ 
+                        nav.pagination.mt-5
+                            a.btn.btn_arrow-prev.pagination__prev(href="#")
+                            a.pagination__item(href="#") 1
+                            a.pagination__item(href="#") 2
+                            a.pagination__item.pagination__item--active(href="#") 3
+                            a.pagination__item(href="#") 4
+                            a.btn.btn_arrow-next.pagination__next(href="#")
         section.content-section
             .container
                 .row.justify-content-between.align-items-center

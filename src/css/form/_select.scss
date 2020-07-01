@@ -1,0 +1,11 @@
+.select{
+    padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 3);
+    outline: none;
+    box-shadow: none;
+    border-color: $gray-500;
+    color: $violet;
+
+    &--full{
+        width: 100%;
+    }
+}

@@ -19,9 +19,7 @@
 @import "framework";
 @import "other/header";
 @import "other/footer";
-@import "other/form";
 @import "other/button";
-@import "other/pagination";
 
 @import "text/spacing";
 @import "text/color";
@@ -37,9 +35,14 @@
 
 @import "list/list";
 
+@import "form/checkbox";
+@import "form/select";
+@import "form/form";
+
 @import "nav/nav";
 @import "nav/navbar";
 @import "nav/breadcrumbs";
+@import "nav/pagination";
 
 @import "logo/logo";
 @import "logo/footer";
@@ -61,4 +64,59 @@
 @import "content/section";
 
 // Catalog
-@import "content/catalog";
+@import "shop/catalog";
+@import "shop/product";
+@import "shop/cart";
+
+.container-fluid{
+    max-width: 1860px;
+}
+.jGrowl {
+    font-family: $font-family-base;
+}
+.jGrowl#jGrowl {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 99;
+
+    .jGrowl-notification {
+        width: 320px;
+        padding: 40px 20px;
+        border: 1px solid $pink-400;
+        border-radius: 0;
+
+        font-size: 14px;
+        color: $gray-800;
+
+        .jGrowl-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            line-height: 30px;
+            width: 34px;
+            text-align: center;
+            border-radius: 0 0 0 15px;
+            color: #fff;
+            outline: 0
+        }
+
+        &.af-message-success {
+            background-color: #f9fcf7!important;
+            .jGrowl-close {
+                background: $gray-400;
+            }
+        }
+
+        &.af-message-error {
+            background-color: #fef8f8!important;
+            .jGrowl-close {
+                background: #df0a0a;
+            }
+        }
+    }
+}

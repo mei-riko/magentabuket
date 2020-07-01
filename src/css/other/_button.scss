@@ -4,6 +4,12 @@
     box-shadow: none;
     transition: $transition-base;
 
+    &:hover, &:focus{
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
     // Small Add to cart
     &_add-to-cart{
         display: block;
@@ -27,6 +33,37 @@
             }
         }
     }
+    // Full Add to Cart
+    &_cart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $pink;
+        color: $pink-100;
+        
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.2;
+        text-transform: uppercase;
+        @extend .text-spacing-50;
+
+        text-align: center;
+        padding: 20px 10px;
+
+        &:hover, &:focus{
+            background-color: $link-hover-color;
+            color: $pink-100;
+        }
+
+        &__icon{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url("../img/bag-white.svg") no-repeat center / 18px;
+            margin-right: 10px;
+        }
+    }
     // pink button on text page made by WuDMC =)
     &_action {
         width: 240px;
@@ -46,6 +83,27 @@
         &:hover, &:focus{
             background-color: $link-hover-color;
             color: $pink-100;
+        }
+    }
+    // Modal Call
+    &_modal{
+        background: $white;
+        border: 1px solid $gray-800;
+        color: $gray-800;
+
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.2;
+        text-transform: uppercase;
+        @extend .text-spacing-50;
+
+        text-align: center;
+        padding: 15px 10px;
+
+        &:hover, &:focus{
+            background-color: $pink-100;
+            color: $gray-800;
+            border: 1px solid $gray-800;
         }
     }
 
@@ -73,5 +131,10 @@
         &:hover{
             opacity: 1;
         }
+    }
+
+    // Status
+    &--full{
+        width: 100%;
     }
 }

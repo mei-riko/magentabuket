@@ -1,13 +1,15 @@
 .item_information{
     background-color: $violet;
     color: $pink-100;
+    padding-top: map-get($map: $spacers, $key: 3);
+    padding-bottom: map-get($map: $spacers, $key: 3);
 
     &__title{
-        font-size: 44px;
+        font-size: 36px;
         margin-bottom: 10px;
     }
     &__content{
-        color: $pink-200;
+        color: $pink-300;
         font-size: $font-size-sm;
     }
 }

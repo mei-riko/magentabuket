@@ -5,11 +5,14 @@
     margin: 0;
     
     &-item {
-        a {
-            color: $violet;
-        }
         &.active {
             color: $pink-400;
+        }
+    }
+    &-link{
+        color: $violet;
+        &:hover{
+            color: $link-hover-color;
         }
     }
 }
