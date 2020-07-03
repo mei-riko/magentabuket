@@ -1,5 +1,5 @@
 .content-section{
-    padding: map-get($map: $spacers, $key: 5) 0;
+    padding: map-get($map: $spacers, $key: 3) 0;
     line-height: 1.6;
 
     &__intro{
@@ -31,10 +31,11 @@
     &__images{
         position: relative;
         padding-bottom: 100px;
+        margin-bottom: map-get($map: $spacers, $key: 3);
     }
     &__image-down{
         width: 60%;
-        height: 500px;
+        height: 280px;
 
         background-position: center;
         background-repeat: no-repeat;
@@ -42,7 +43,7 @@
     }
     &__image-up{
         width: 60%;
-        height: 500px;
+        height: 280px;
 
         background-position: center;
         background-repeat: no-repeat;
@@ -51,5 +52,35 @@
         position: absolute;
         top: 100px;
         right: 0;
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'sm')){
+    .content-section{
+        padding: map-get($map: $spacers, $key: 4) 0;
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
+    .content-section{
+        &__images{
+            margin-bottom: 0;
+        }
+        &__image-down{
+            height: 400px;
+        }
+        &__image-up{
+            height: 400px;
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .content-section{
+        padding: map-get($map: $spacers, $key: 5) 0;
+
+        &__image-down{
+            height: 500px;
+        }
+        &__image-up{
+            height: 500px;
+        }
     }
 }

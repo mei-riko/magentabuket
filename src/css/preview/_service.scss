@@ -4,13 +4,35 @@
     align-items: center;
 
     &__img{
-        flex: 0 0 120px;
-        max-width: 40%;
+        flex: 0 0 80px;
     }
     &__content{
-        flex: 0 0 calc(100% - 120px);
-        max-width: 60%;
+        flex: 0 0 calc(100% - 80px);
 
-        padding-left: map-get($map: $spacers, $key: 3);
+        padding-left: map-get($map: $spacers, $key: 2);
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'sm')){
+    .preview_service{
+        &__title{
+            margin-bottom: map-get($map: $spacers, $key: 1);
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .preview_service{
+        &__img{
+            flex: 0 0 120px;
+            max-width: 40%;
+        }
+        &__title{
+            margin-bottom: map-get($map: $spacers, $key: 2);
+        }
+        &__content{
+            flex: 0 0 calc(100% - 120px);    
+            max-width: 60%;
+            padding-left: map-get($map: $spacers, $key: 3);
+        }
     }
 }

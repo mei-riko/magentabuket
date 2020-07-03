@@ -1,12 +1,12 @@
 .item{
     background-color: $white;
     border-radius: 6px;
-    padding: map-get($spacers,4);
+    padding: map-get($spacers,2);
 
     &__title{
         text-transform: uppercase;
         font-weight: 800;
-        font-size: 30px;
+        font-size: 24px;
         line-height: 1.2;
         margin-bottom: map-get($spacers, 2);
     }
@@ -18,5 +18,18 @@
         display: block;
         max-width: calc(100% - 10px);
         height: auto!important;
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'sm')){
+    .item{
+        padding: map-get($spacers,3);
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .item{
+        padding: map-get($spacers,4);
+        &__title{
+            font-size: 30px;
+        }
     }
 }

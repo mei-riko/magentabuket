@@ -64,6 +64,18 @@
             margin-right: 10px;
         }
     }
+    // Remove or Delete
+    &_remove{
+        display: block;
+        width: 30px;
+        height: 30px;
+
+        background: url("../img/close-bold.svg") no-repeat center / 28px;
+
+        &:hover, &:focus{
+            background-color: $pink-100;
+        }
+    }
     // pink button on text page made by WuDMC =)
     &_action {
         width: 240px;

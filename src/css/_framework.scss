@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{ 
     font-family: $font-family-serif;
     color: $gray-800;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: map-get($spacers, 2);
 }
 
@@ -26,12 +26,12 @@ h1, h2, h3, h4, h5, h6,
     margin-top: map-get($spacers, 3);
 }
 
-.h1,h1{font-size: 44px;}
-.h2,h2{font-size: 36px;}
-.h3,h3{font-size: 30px;}
-.h4,h4{font-size: 26px;}
-.h5,h5{font-size: 22px;}
-.h6,h6{font-size: 18px;}
+.h1,h1{font-size: 30px;}
+.h2,h2{font-size: 26px;}
+.h3,h3{font-size: 24px;}
+.h4,h4{font-size: 22px;}
+.h5,h5{font-size: 18px;}
+.h6,h6{font-size: 16px;}
 
 p {
     margin-bottom: map-get($spacers, 3);
@@ -39,7 +39,6 @@ p {
         margin-bottom: 0;
     }
 }
-
 ol, ul{
     font-size: 1rem;
     line-height: 1.4;
@@ -48,8 +47,6 @@ ol, ul{
         margin-bottom: 0;
     }
 }
-
-
 a{
     display: inline-block;
     text-decoration: none;
@@ -58,14 +55,12 @@ a{
         text-decoration: none;
     }
 }
-
 .img-fluid{
     display: block;
     height: auto;
     margin: 0 auto;
     max-width: 100%;
 }
-
 .blockquote, blockquote{
     position: relative;
     font-family: $font-family-serif;
@@ -76,35 +71,53 @@ a{
     color: $violet!important;
     background-color: $pink-200;
 
-    padding: 36px 54px 36px 150px;
+    padding: 60px 30px 30px 30px;
 }
 .blockquote::after, blockquote::after{
     background: url("../img/flower.svg") no-repeat center / contain;
 
     content: "";
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 30px;
+    height: 30px;
 
     position: absolute;
-    left: 25px;
-    top: calc(50% - 50px);
+    left: 30px;
+    top: 15px;
 
-    opacity: 0.2;
+    opacity: 0.4;
 }
-
 .tooltip-inner {
     font-size: 12px;
     line-height: 16px;
 }
-
 @media all and (min-width: map-get($grid-breakpoints, 'sm')){
 }
 @media all and (min-width: map-get($grid-breakpoints, 'md')){
+    .blockquote, blockquote{
+        padding: 36px 54px 36px 150px;
+    }
+    .blockquote::after, blockquote::after{
+        width: 100px;
+        height: 100px;
+        left: 25px;
+        top: calc(50% - 50px);
+        opacity: 0.2;
+    }
 }
 @media all and (min-width: map-get($grid-breakpoints, 'lg')){
 }
 @media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6{ 
+        line-height: 1.2;
+    }
+    .h1,h1{font-size: 44px;}
+    .h2,h2{font-size: 36px;}
+    .h3,h3{font-size: 30px;}
+    .h4,h4{font-size: 26px;}
+    .h5,h5{font-size: 22px;}
+    .h6,h6{font-size: 18px;}
 }
 
 @media all and (min-width: 1920px){

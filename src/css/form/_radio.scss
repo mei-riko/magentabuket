@@ -1,4 +1,4 @@
-.checkbox{
+.radio{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -10,8 +10,19 @@
     &__input{
         display: none;
 
-        &:checked + .checkbox__label:before {
-            background: $violet url("../img/checkmark-white.svg") no-repeat center / 10px;
+        &:checked + .radio__label:after {
+            content: '';
+            display: block;
+            background-color: $pink;
+
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            transform: translateY(-50%);
         }
     }
     &__label{
@@ -27,7 +38,8 @@
             display: block;
 
             border: 1px solid $pink-400;
-
+            border-radius: 12px;
+            background-color: $white;
             width: 24px;
             height: 24px;
 
@@ -36,5 +48,9 @@
             top: 50%;
             transform: translateY(-50%);
         }
+    }
+
+    & + .radio{
+        margin-top: map-get($map: $spacers, $key: 1);
     }
 }

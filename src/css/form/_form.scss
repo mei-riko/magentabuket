@@ -1,0 +1,46 @@
+.form{
+    &__input{
+        & + *{
+            margin-top: map-get($map: $spacers, $key: 2);
+        }
+        & + .form-validation{
+            margin-top: map-get($map: $spacers, $key: 1);
+        }
+        &.error{
+            border-color: $red;
+            &::placeholder{
+                color: $red;
+            }
+        }
+    }
+    &__btn + *{
+        margin-top: map-get($map: $spacers, $key: 2);
+    }
+    &__agree{
+        font-size: 12px;
+        min-height: 16px;
+        .checkbox__label{
+            padding-left: 24px;
+            &:before{
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .checkbox__input:checked + .checkbox__label:before{
+            background-color: $gray-800;
+        }
+    }
+
+    &-validation{
+        font-size: 12px;
+        color: $gray-800;
+
+        &.error{
+            color: $red;
+        }
+
+        & + *{
+            margin-top: map-get($map: $spacers, $key: 2);
+        }
+    }
+}

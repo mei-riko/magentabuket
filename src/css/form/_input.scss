@@ -1,0 +1,30 @@
+.input{
+    outline: none;
+    box-shadow: none;
+
+    font-size: 16px;
+    line-height: 1.2;
+
+    padding: 18px 20px;
+    border: 1px solid $gray-400;
+    border-radius: 4px;
+
+    max-width: 100%;
+
+    transition: $transition-base;
+    &:focus{
+        background-color: $pink-100;
+    }
+
+    &_number{
+        padding-right: 10px;
+    }
+
+    &--full{
+        width: 100%;
+    }
+    &:disabled,
+    &--disable{
+        cursor: not-allowed;
+    }
+}

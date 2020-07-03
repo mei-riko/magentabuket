@@ -1,3 +1,8 @@
 .logo_footer{
-    margin-left: 0;
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .logo_footer{
+        margin-left: 0;
+    }
 }

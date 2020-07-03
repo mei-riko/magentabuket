@@ -1,9 +1,9 @@
 .preview{
     &__title{
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 800;
         line-height: 1.2;
-        margin-bottom: map-get($map: $spacers, $key: 2);
+        margin-bottom: 0;
 
         &_link{
             color: $gray-800;
@@ -15,5 +15,21 @@
     &__intro{
         font-size: $font-size-sm;
         color: $gray-600;
+        line-height: 1.4;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'sm')){
+    .preview{
+        &__title{
+            margin-bottom: map-get($map: $spacers, $key: 2);
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .preview{
+        &__title{
+            font-size: 24px;
+        }
     }
 }

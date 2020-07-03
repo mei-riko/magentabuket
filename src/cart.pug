@@ -3,39 +3,92 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title 404
+        title Cart
         include chunks/head.pug
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        .pt-3
-            include chunks/header.pug
-        section.content-section
-            .container
-                p.h1.text-pink.text-bold.text-center Упс! Ошибка 404
-                p.text-center Страница удалена или не существует. Проверьте правильность ссылки :-)
-                .row.mt-5
-                    .col-12.col-xl-6
-                        .item.item_category.item_category-flowers.mb-3.mb-xl-0
-                            p.item_category__title Букеты
-                            p.item__content Моно-, мужские и свадебные букеты на&nbsp;любой вкус
-                            p
-                                a.link-arrow(href="category.html") Посмотреть все
-                    .col-12.col-xl-6
-                        .item.item_category.item_category-composition
-                            p.item_category__title Композиции
-                            p.item__content В стильных фирменных коробках или&nbsp;корзинках
-                            p
-                                a.link-arrow(href="category.html") Посмотреть все
-        aside.bg-pink-300
-            .container
-                .item.item_alert.text-center
-                    p.item__title.item_alert__title.text-violet Подпишитесь на нас в instagram
-                    p.item__content.item_alert__content 
-                        a.text-serif.text-italic(href="#") @magenta_buket
-        aside.map(style="position:relative;overflow:hidden;")
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9fedb3162965a729bf93422b219eed0cbf23d407a887b1d3dbebacf3aa6e74d2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        include chunks/header.pug
+        section.container.cart
+            .preview.preview_in-cart.mb-3
+                .row.align-items-center
+                    .col-2.col-xl-2
+                        img.preview_in-cart__img.img-fluid(src="../img/product-1.png")
+                    .col-3.col-xl-3
+                        a.preview__title.preview__title_link.mb-0(href="product.html") Букет «Диана»
+                    .col-1.col-xl-1
+                        input.input.input_number(type="number" value=1 min=1)
+                    .col-3.col-xl-2.text-center
+                        p.preview_in-cart__price 6 120₽
+                    .col-2.col-xl-3
+                        p.preview__intro
+                            span.d-block Размер: 30 см
+                            span.d-block Основа букета:	сирень
+                form.preview_in-cart__remove(action="")
+                    input(type="hidden")
+                    button.btn.btn_remove(action="cart/remove")
+            .preview.preview_in-cart.mb-3
+                .row.align-items-center
+                    .col-2.col-xl-2
+                        img.preview_in-cart__img.img-fluid(src="../img/product-2.png")
+                    .col-3.col-xl-3
+                        a.preview__title.preview__title_link.mb-0(href="product.html") Букет «Всё для тебя»
+                    .col-1.col-xl-1
+                        input.input.input_number(type="number" value=1 min=1)
+                    .col-3.col-xl-2.text-center
+                        p.preview_in-cart__price 6 120₽
+                    .col-2.col-xl-3
+                        p.preview__intro
+                            span.d-block Размер: 30 см
+                            span.d-block Основа букета:	сирень
+                form.preview_in-cart__remove(action="")
+                    input(type="hidden")
+                    button.btn.btn_remove(action="cart/remove")
+            form.form.row
+                .col-12.col-xl-4.mb-3
+                    .item.item_alert.item_content-col
+                        p.text-uppercase.text-spacing-50.text-bold Выберите способ доставки
+                        label.radio.cart__radio(for="delivery_1")
+                            input.radio__input(checked type="radio" name="delivery" value="1" id="delivery_1")
+                            span.radio__label Самовывоз
+                        label.radio.cart__radio(for="delivery_2")
+                            input.radio__input(type="radio" name="delivery" value="1" id="delivery_2")
+                            span.radio__label Курьер в пределах КАД
+                        label.radio.cart__radio(for="delivery_3")
+                            input.radio__input(type="radio" name="delivery" value="1" id="delivery_3")
+                            span.radio__label Курьер за пределы КАД
+                .col-12.col-xl-4.mb-3
+                    .item.item_alert.item_content-col
+                        p.text-uppercase.text-spacing-50.text-bold Выберите способ оплаты
+                        label.radio.cart__radio(for="pay_1")
+                            input.radio__input(checked type="radio" name="pay" value="1" id="pay_1")
+                            span.radio__label Наличными
+                        label.radio.cart__radio(for="pay_2")
+                            input.radio__input(type="radio" name="pay" value="1" id="pay_2")
+                            span.radio__label Картой онлайн
+                        label.radio.cart__radio(for="pay_3")
+                            input.radio__input(type="radio" name="pay" value="1" id="pay_3")
+                            span.radio__label Картой при получении
+                .col-12.col-xl-4.mb-3
+                    .item.item_alert.item_content-col
+                        p.text-uppercase.text-spacing-50.text-bold Итоговая стоимость
+                        p.cart__price.mb-1 6 120₽
+                        p.text-small.text-grey Доставка за пределами рассчитывается менеджером и оплачивается отдельно
+                .col-12.col-xl-6.mb-3
+                    .item.item_alert.item_content-col
+                        p.text-uppercase.text-spacing-50.text-bold Данные получателя
+                        input.form__input.input.input--full(type="text" placeholder="Укажите ваше имя")
+                        input.form__input.input.input--full.phone(type="text" placeholder="Контактный телефон *")
+                        input.form__input.input.input--full(type="email" placeholder="E-mail *")
+                .col-12.col-xl-6.mb-3
+                    .item.item_alert.item_content-col
+                        p.text-uppercase.text-spacing-50.text-bold Адрес доставки
+                        input.form__input.input.input--disable.input--full(type="text" placeholder="Город" disabled)
+                        input.form__input.input.input--full(type="text" placeholder="Район" disabled)
+                        input.form__input.input.input--full(type="text" placeholder="Улица / дом / квартира" disabled)
+                .col-12.mb-3.text-center
+                    button.btn.btn_action(type=submit) Оформить заказ
         include chunks/footer.pug
         
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')

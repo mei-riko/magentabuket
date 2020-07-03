@@ -1,1 +1,9 @@
-.modal{}
+.modal{
+    width: 560px;
+    max-width: 100%;
+    background-color: $pink-200;
+
+    &.fancybox-content{
+        background-color: $pink-200;
+    }
+}

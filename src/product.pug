@@ -51,7 +51,7 @@ html(lang="ru")
                             | Добавить в корзину
                         p.product__comment.my-2
                             a.link-underline.link-inverse(href="delivery.html") Узнать стоимость доставки и самовывоза
-                        button.btn.btn_modal.btn--full(data-fancybox data-src="#quick-order" href="javascript:;") Быстрый заказ
+                        button.btn.btn_modal.btn--full(data-fancybox="modal" data-src="#quick-order" href="javascript:;") Быстрый заказ
         section.content-section.bg-pink-300
             .container
                 ol.list.list_numeric.row
@@ -71,6 +71,17 @@ html(lang="ru")
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9fedb3162965a729bf93422b219eed0cbf23d407a887b1d3dbebacf3aa6e74d2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
         include chunks/footer.pug
         .modal.modal_order#quick-order
+            p.h3.text-bold.mb-3 Осталось немного!
+            p Заполните форму и наш менеджер свяжется с вами для уточнения деталей
+            form.form(action="")
+                input.form__input.input.input--full.phone.error(type="text" placeholder="Контактный телефон")
+                .form-validation.error Обязательно для заполнения
+                input.form__input.input.input--full(type="text" placeholder="Ваше имя")
+                button.btn.btn_action.form__btn Оформить заказ
+                .form__agree.checkbox
+                    input.checkbox__input#agree(type="checkbox" name="agree" checked="checked" required="required")
+                    label.checkbox__label(for="agree") согласен с 
+                        a.link-underline(href="/policy.pdf" target="_blank") обработкой персональных данных
         link(href='./css/jquery.fancybox.min.css', rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
         

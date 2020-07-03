@@ -5,6 +5,7 @@
 @import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/transitions";
 
 @import "node_modules/bootstrap/scss/utilities/display";
 @import "node_modules/bootstrap/scss/utilities/flex";
@@ -17,9 +18,11 @@
 @import "node_modules/bootstrap/scss/navbar";
 
 @import "framework";
+
+@import "other/modal";
+@import "other/button";
 @import "other/header";
 @import "other/footer";
-@import "other/button";
 
 @import "text/spacing";
 @import "text/color";
@@ -36,7 +39,9 @@
 @import "list/list";
 
 @import "form/checkbox";
+@import "form/radio";
 @import "form/select";
+@import "form/input";
 @import "form/form";
 
 @import "nav/nav";
@@ -50,6 +55,7 @@
 @import "preview/preview";
 @import "preview/service";
 @import "preview/product";
+@import "preview/in-cart";
 
 @import "slider/slider";
 @import "slider/header";

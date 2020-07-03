@@ -20,4 +20,15 @@
         background-color: $pink-100;
         padding: map-get($map: $spacers, $key: 2) 0;
     }
+    &-toggler{
+        background-color: $pink-300;
+        position: relative;
+        z-index: 11;
+        &:hover, &:focus{
+            outline: none;
+        }
+    }
+    &-toggler-icon {
+        background-image: url("../img/nav.svg");
+    }
 }

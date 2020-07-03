@@ -4,15 +4,15 @@
     color: $gray-800;
     line-height: 1.6;
   }
-  .content__intro {
+  &__intro {
     font-family: $font-family-serif;
     font-style: italic;
-    font-size: 22px;
+    font-size: 16px;
     color: $gray-800;
     text-align: center;
 
     margin-top: map-get($map: $spacers, $key: 3);
-    margin-bottom: map-get($map: $spacers, $key: 5);
+    margin-bottom: map-get($map: $spacers, $key: 3);
   }
   h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6{ 
@@ -27,6 +27,15 @@
       & + li{
           margin-top: map-get($map: $spacers, $key: 1);
       }
+    }
+  }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
+  .content{
+    &__intro{
+      font-size: 22px;
+      margin-bottom: map-get($map: $spacers, $key: 5);
     }
   }
 }

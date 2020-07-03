@@ -79,7 +79,7 @@
               На фотографиях представлены букеты <br/> среднего размера (40 см)</p>
             <button class="btn btn_cart btn--full"> <span class="btn_cart__icon"> </span>Добавить в корзину</button>
             <p class="product__comment my-2"><a class="link-underline link-inverse" href="delivery.html">Узнать стоимость доставки и самовывоза</a></p>
-            <button class="btn btn_modal btn--full" data-fancybox="data-fancybox" data-src="#quick-order" href="javascript:;">Быстрый заказ</button>
+            <button class="btn btn_modal btn--full" data-fancybox="modal" data-src="#quick-order" href="javascript:;">Быстрый заказ</button>
           </div>
         </div>
       </div>
@@ -144,7 +144,20 @@
         </div>
       </div>
     </footer>
-    <div class="modal modal_order" id="quick-order"></div>
+    <div class="modal modal_order" id="quick-order">
+      <p class="h3 text-bold mb-3">Осталось немного!</p>
+      <p>Заполните форму и наш менеджер свяжется с вами для уточнения деталей</p>
+      <form class="form" action="">
+        <input class="form__input input input--full phone error" type="text" placeholder="Контактный телефон"/>
+        <div class="form-validation error">Обязательно для заполнения</div>
+        <input class="form__input input input--full" type="text" placeholder="Ваше имя"/>
+        <button class="btn btn_action form__btn">Оформить заказ</button>
+        <div class="form__agree checkbox">
+          <input class="checkbox__input" id="agree" type="checkbox" name="agree" checked="checked" required="required"/>
+          <label class="checkbox__label" for="agree">согласен с <a class="link-underline" href="/policy.pdf" target="_blank">обработкой персональных данных</a></label>
+        </div>
+      </form>
+    </div>
     <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/jquery.inputmask.js"></script>

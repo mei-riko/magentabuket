@@ -3,7 +3,7 @@
         text-transform: uppercase;
         color: $violet;
         line-height: 1.1;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 800;
 
         @extend .mb-1;
@@ -51,7 +51,7 @@
         text-transform: uppercase;
         color: $violet;
         line-height: 1.1;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 800;
         @extend .mb-1;
     }
@@ -62,5 +62,15 @@
         @extend .mb-0;
 
         color: $gray-800;
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .header{
+        &__title{
+            font-size: 16px;
+        }
+        &__cart-title{
+            font-size: 16px;
+        }
     }
 }

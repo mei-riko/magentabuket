@@ -1,5 +1,17 @@
 .item_temporary{
     border-radius: 0;
     width: 100%;
-    font-size: 14px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
+    .item{
+        text-transform: none;
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
+    .item{
+        font-size: 14px;
+    }
 }

@@ -1,8 +1,6 @@
 .nav{
     &-item{
-        padding: 10px 15px;
-        &:first-child{padding-left: 30px;}
-        &:last-child{padding-right: 30px;}
+        padding: 5px 15px;
     }
     &-link{
         font-size: $font-size-sm;
@@ -11,6 +9,8 @@
         border-radius: 4px;
 
         padding: 4px 16px;
+
+        text-align: center;
 
         &--active{
             background: $pink;
@@ -34,6 +34,25 @@
             padding: 0;
             background: inherit;
             display: block;
+        }
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .nav{
+        &-item{
+            padding: 10px 15px;
+            &:first-child{padding-left: 30px;}
+            &:last-child{padding-right: 30px;}
+        }
+        &-link{
+            text-align: left;
+        }
+
+        &_footer{
+            .nav-item{
+                padding: 0;
+            }
         }
     }
 }

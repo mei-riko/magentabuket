@@ -2,6 +2,8 @@ import $ from 'jquery'
 import '../../node_modules/popper.js/dist/umd/popper';
 import '../../node_modules/bootstrap/js/dist/util';
 import '../../node_modules/bootstrap/js/dist/tooltip';
+import '../../node_modules/bootstrap/js/dist/collapse';
+import '../../node_modules/bootstrap/js/dist/dropdown';
 
 $(document).ready(() =>{
     $("a.scroll").click(function() {
@@ -17,9 +19,10 @@ $(document).ready(() =>{
 	// Input mask
 	if( $('.phone').length > 0 ) {
 		$(".phone").inputmask({
-		mask: "8 999 999 99 99",
+		mask: "+7 999 999 99 99",
 		placeholder: " ",
 		showMaskOnHover: true,
+		
 		onincomplete: function(){ 
 			$(this).closest("form").addClass('error-phone'); 
 			$(this).addClass('error'); 
@@ -38,6 +41,11 @@ $(document).ready(() =>{
 		  $(this).blur();
 		  return false;
 	  }
+	});
+
+	// Modal
+	$('[data-fancybox="modal"]').fancybox({
+		autoFocus: false
 	});
 
 	// Подсказка
@@ -79,6 +87,13 @@ $(document).ready(() =>{
 				  settings  : {
 					slidesToShow  : 2,
 					slidesToScroll: 2,
+				  }
+				},
+				{
+				  breakpoint: 576,
+				  settings  : {
+					slidesToShow  : 1,
+					slidesToScroll: 1,
 				  }
 				}
 			]
