@@ -1,5 +1,6 @@
 .catalog{
     padding: map-get($map: $spacers, $key: 3) 0;
+    overflow: hidden;
 
     &__title{
         text-transform: uppercase;
@@ -11,6 +12,39 @@
     &__filter-name{
         font-size: 14px;
         font-weight: 800;
+    }
+    &__filter-btn{
+        width: calc(100% - 30px);
+        max-width: 100%;
+        margin: 0 auto map-get($map: $spacers, $key: 3);
+    }
+    &__filter-close{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    &__filter-block{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 101;
+
+        min-height: 100vh;
+        height: 100%;
+        width: 300px;
+        max-width: 100%;
+        overflow: auto;
+        
+        padding: map-get($map: $spacers, $key: 3);
+        background-color: $pink-200;
+
+        display: none;
+        transform: translateX(100%);
+        transition: $transition-base;
+
+        &.active{
+            transform: translateX(0);
+        }
     }
     &__category{
         font-size: 14px;
@@ -49,6 +83,41 @@
 
         &:hover, &:focus{
             background-color: $pink;
+        }
+    }
+
+    &__item-title{
+        font-size: 20px;
+        text-transform: none;
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
+    .catalog{
+        &__item-title{
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'lg')){
+    .catalog{
+        &__item-title{
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+        &__filter-btn{
+            display: none;
+        }
+        &__filter-close{
+            display: none;
+        }
+        &__filter-block{
+            position: unset;
+            min-height: 1px;
+            height: auto;
+            background: unset;
+            transform: unset;
+            padding: 0 map-get($map: $spacers, $key: 2);
         }
     }
 }

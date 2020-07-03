@@ -1,11 +1,13 @@
 .product{
     margin:0;
 
-    &__info{
-        position: sticky;
-        top: 0;
-        left: 0;
-        padding-left: calc(100%/24);
+    &__row{
+        margin-left: -5px;
+        margin-right: -5px;
+
+        [class*="col-"]{
+            padding: 0 5px;
+        }
     }
     &__intro{
         font-size: $font-size-sm;
@@ -23,5 +25,29 @@
     }
     &__filter-name{
         @extend .catalog__title;
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
+    .product{
+        &__info{
+            position: sticky;
+            top: 0;
+            left: 0;
+            padding-left: calc(100%/24);
+    
+        }
+    }
+}
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .product{
+        &__row{
+            margin-left: -15px;
+            margin-right: -15px;
+    
+            [class*="col-"]{
+                padding: 0 15px;
+            }
+        }
     }
 }

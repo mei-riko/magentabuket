@@ -13,7 +13,9 @@ html(lang="ru")
         section.catalog
             .container
                 .row
-                    .col-12.col-xl-3
+                    a.btn.btn_modal#btn-filter.catalog__filter-btn(data-trigger="click" href="#") Показать фильтры
+                    .col-12.col-lg-3#catalog-filter.catalog__filter-block
+                        a.btn.btn_remove.catalog__filter-close#btn-close(data-trigger="click" href="#")
                         p.catalog__title.mb-2 Категории
                         a.catalog__category.catalog__link.catalog__link--active.mt(href="") Все букеты
                         a.catalog__subcategory.catalog__link(href="") Монобукеты
@@ -38,45 +40,45 @@ html(lang="ru")
                             input.checkbox__input(type="checkbox" name="msoption|tags" id="mse2_msoption|tags_2" value="полевые цветы")
                             span.checkbox__label лилии
                         button.btn.catalog__btn.mt-4 Применить фильтры
-                    .col-12.col-xl-9
+                    .col-12.col-lg-9
                         .item.item_information.text-center.bg-pink
-                            p.item__title.item_information__title Выбери размер букета сам!
-                            p.item__content.item_information__content Любой из наших букетов можно заказать в размере 30 см, 40 см и более см
+                            p.catalog__item-title.item__title.item_information__title Выбери размер букета сам!
+                            p.item__content.item_information__content Любой из наших букетов можно заказать в размере 30, 40 и более см
                         h1.h4.text-violet Букеты
                         ul.breadcrumb
                             li.breadcrumb-item
                                 a.breadcrumb-link(href="#") Главная
                             li.breadcrumb-item.active Букеты
                         .row
-                            .col-6.col-xl-4.mt-4
+                            .col-6.col-md-4.col-xl-4.mt-4
                                 .preview.preview_product
                                     a.preview_product__image(href="product.html" style="background-image: url('../img/product-1.png');")
                                         button.preview_product__btn.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
                                     a.preview_product__category(href="category.html") Монобукеты
                                     a.preview__title.preview__title_link(href="product.html") «Эстер»
                                     p.preview_product__price от 4 420 ₽  
-                            .col-6.col-xl-4.mt-4
+                            .col-6.col-md-4.col-xl-4.mt-4
                                 .preview.preview_product
                                     a.preview_product__image(href="product.html" style="background-image: url('../img/product-2.png');")
                                         button.preview_product__btn.btn.btn_add-to-cart.btn_add-to-cart--active(data-toggle="tooltip" data-placement="top" title="Убрать из корзины")
                                     a.preview_product__category(href="category.html") Мужские букеты
                                     a.preview__title.preview__title_link(href="product.html") «Ароматная сирень»
                                     p.preview_product__price от 4 420 ₽
-                            .col-6.col-xl-4.mt-4
+                            .col-6.col-md-4.col-xl-4.mt-4
                                 .preview.preview_product
                                     a.preview_product__image(href="product.html" style="background-image: url('../img/product-3.png');")
                                         button.preview_product__btn.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
                                     a.preview_product__category(href="category.html") Монобукеты
                                     a.preview__title.preview__title_link(href="product.html") «Всё для тебя»
                                     p.preview_product__price от 4 420 ₽
-                            .col-6.col-xl-4.mt-4
+                            .col-6.col-md-4.col-xl-4.mt-4
                                 .preview.preview_product
                                     a.preview_product__image(href="product.html" style="background-image: url('../img/product-3.png');")
                                         button.preview_product__btn.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
                                     a.preview_product__category(href="category.html") Монобукеты
                                     a.preview__title.preview__title_link(href="product.html") «Всё для тебя»
                                     p.preview_product__price от 4 420 ₽
-                            .col-6.col-xl-4.mt-4
+                            .col-6.col-md-4.col-xl-4.mt-4
                                 .preview.preview_product
                                     a.preview_product__image(href="product.html" style="background-image: url('../img/product-1.png');")
                                         button.preview_product__btn.btn.btn_add-to-cart(data-toggle="tooltip" data-placement="top" title="Добавить в корзину")
@@ -93,11 +95,11 @@ html(lang="ru")
         section.content-section
             .container
                 .row.justify-content-between.align-items-center
-                    .col-12.col-xl-5
+                    .col-12.col-lg-5
                         .content-section__images
                             .content-section__image-up(style="background-image: url('../img/img-1.png');")
                             .content-section__image-down(style="background-image: url('../img/img-2.png');")
-                    .col-12.col-xl-6
+                    .col-12.col-xl-6.col-lg-7
                         p.content-section__annotation Студия цветов «Маджента» – мир чувств в букетах! Цветы могут сказать гораздо больше cлов. Правильно подобранный букет выражает все надежды и мечты.
                         p.content-section__list-title Только свежие цветы
                         p.content-section__list-content Мы предлагаем лишь качественный и свежий цветок, поэтому букеты будут радовать вас не один день, не теряя своей свежести и привлекательности

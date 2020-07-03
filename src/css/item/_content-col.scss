@@ -1,4 +1,10 @@
 .item_content-col{
-    padding: map-get($spacers,3) map-get($spacers,4);
-    height: 100%;
+    padding: map-get($spacers,3);
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'xl')){
+    .item_content-col{
+        padding: map-get($spacers,3) map-get($spacers,4);
+        height: 100%;
+    }
 }

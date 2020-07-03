@@ -3,7 +3,7 @@ import '../../node_modules/popper.js/dist/umd/popper';
 import '../../node_modules/bootstrap/js/dist/util';
 import '../../node_modules/bootstrap/js/dist/tooltip';
 import '../../node_modules/bootstrap/js/dist/collapse';
-import '../../node_modules/bootstrap/js/dist/dropdown';
+// import '../../node_modules/bootstrap/js/dist/filter';
 
 $(document).ready(() =>{
     $("a.scroll").click(function() {
@@ -54,7 +54,23 @@ $(document).ready(() =>{
 	$('a[data-trigger="click"]').click(function(e){
 		e.preventDefault();
 	})
-
+	// Фильтр в каталоге
+	$("#btn-filter").on("click", function(){
+		if (!$('#catalog-filter').hasClass("active")){
+			$('#catalog-filter').slideDown();
+			$('#catalog-filter').addClass("active");
+			$("body").css("overflow","hidden");
+		}
+	});
+	$("#btn-close").on("click", function(){
+		$('#catalog-filter').slideUp();
+		$('#catalog-filter').removeClass("active");
+		$("body").css("overflow","");
+	});
+	$(".catalog__filter-block .catalog__btn").on("click", function(){
+		$('#catalog-filter').removeClass("active");
+		$("body").css("overflow","");
+	});	
 	// Слайдер
 	if( $('.slider').length > 0 ){
 		let $slickIndex = $('.slider#slider-index');
@@ -105,4 +121,30 @@ $(document).ready(() =>{
 	$(".product-next").on("click", function(){
 		$('.slider.slider_product').slick('slickNext');
 	});
+
+	$(window).scroll(function() {
+		if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
+			if ( $(window).scrollTop() > 100 ) {
+				$(".fixed-panel").addClass('fixed-panel--show');
+			} else {
+				$(".fixed-panel").removeClass('fixed-panel--show');
+			}
+		}
+	});
+	
+    $("#scrollTop").click(function(e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, 600);
+    })
+});
+
+$(document).mouseup(function (e){ // событие клика по веб-документу
+	let filterActive = $(".catalog .catalog__filter-block"); // элемент
+	  
+	if (!filterActive.is(e.target) // клик был не по блоку
+		  && filterActive.has(e.target).length === 0 // и не по его дочерним элементам
+		  ) { 
+			filterActive.removeClass("active");
+			$("body").css("overflow","");
+	}
 });

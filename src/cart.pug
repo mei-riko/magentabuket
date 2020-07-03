@@ -12,16 +12,16 @@ html(lang="ru")
         include chunks/header.pug
         section.container.cart
             .preview.preview_in-cart.mb-3
-                .row.align-items-center
-                    .col-2.col-xl-2
+                .row.align-items-center.justify-content-end.justify-content-xl-start
+                    .col-4.col-sm-3.col-md-2
                         img.preview_in-cart__img.img-fluid(src="../img/product-1.png")
-                    .col-3.col-xl-3
+                    .col-8.col-sm-6.col-md-5.col-lg-3
                         a.preview__title.preview__title_link.mb-0(href="product.html") Букет «Диана»
-                    .col-1.col-xl-1
-                        input.input.input_number(type="number" value=1 min=1)
-                    .col-3.col-xl-2.text-center
+                    .col-8.col-sm-3.col-md-2.col-lg-2.col-xl-1.mt-1.mt-sm-0
+                        input.input.input_number.preview_in-cart__input(type="number" value=1 min=1)
+                    .col-8.col-sm-9.col-md-3.col-lg-2.mt-2.mt-md-0.text-xl-center
                         p.preview_in-cart__price 6 120₽
-                    .col-2.col-xl-3
+                    .col-8.col-sm-9.col-md-10.col-lg-3.mt-2.mt-lg-0
                         p.preview__intro
                             span.d-block Размер: 30 см
                             span.d-block Основа букета:	сирень
@@ -29,16 +29,16 @@ html(lang="ru")
                     input(type="hidden")
                     button.btn.btn_remove(action="cart/remove")
             .preview.preview_in-cart.mb-3
-                .row.align-items-center
-                    .col-2.col-xl-2
+                .row.align-items-center.justify-content-end.justify-content-xl-start
+                    .col-4.col-sm-3.col-md-2
                         img.preview_in-cart__img.img-fluid(src="../img/product-2.png")
-                    .col-3.col-xl-3
+                    .col-8.col-sm-6.col-md-5.col-lg-3
                         a.preview__title.preview__title_link.mb-0(href="product.html") Букет «Всё для тебя»
-                    .col-1.col-xl-1
-                        input.input.input_number(type="number" value=1 min=1)
-                    .col-3.col-xl-2.text-center
+                    .col-8.col-sm-3.col-md-2.col-lg-2.col-xl-1.mt-1.mt-sm-0
+                        input.input.input_number.preview_in-cart__input(type="number" value=1 min=1)
+                    .col-8.col-sm-9.col-md-3.col-lg-2.text-xl-center.mt-2.mt-md-0
                         p.preview_in-cart__price 6 120₽
-                    .col-2.col-xl-3
+                    .col-8.col-sm-9.col-md-10.col-lg-3.mt-2.mt-lg-0
                         p.preview__intro
                             span.d-block Размер: 30 см
                             span.d-block Основа букета:	сирень
@@ -46,7 +46,7 @@ html(lang="ru")
                     input(type="hidden")
                     button.btn.btn_remove(action="cart/remove")
             form.form.row
-                .col-12.col-xl-4.mb-3
+                .col-12.col-md-6.col-lg-4.mb-3
                     .item.item_alert.item_content-col
                         p.text-uppercase.text-spacing-50.text-bold Выберите способ доставки
                         label.radio.cart__radio(for="delivery_1")
@@ -58,7 +58,7 @@ html(lang="ru")
                         label.radio.cart__radio(for="delivery_3")
                             input.radio__input(type="radio" name="delivery" value="1" id="delivery_3")
                             span.radio__label Курьер за пределы КАД
-                .col-12.col-xl-4.mb-3
+                .col-12.col-md-6.col-lg-4.mb-3
                     .item.item_alert.item_content-col
                         p.text-uppercase.text-spacing-50.text-bold Выберите способ оплаты
                         label.radio.cart__radio(for="pay_1")
@@ -70,18 +70,18 @@ html(lang="ru")
                         label.radio.cart__radio(for="pay_3")
                             input.radio__input(type="radio" name="pay" value="1" id="pay_3")
                             span.radio__label Картой при получении
-                .col-12.col-xl-4.mb-3
+                .col-12.col-lg-4.mb-3
                     .item.item_alert.item_content-col
                         p.text-uppercase.text-spacing-50.text-bold Итоговая стоимость
                         p.cart__price.mb-1 6 120₽
                         p.text-small.text-grey Доставка за пределами рассчитывается менеджером и оплачивается отдельно
-                .col-12.col-xl-6.mb-3
+                .col-12.col-md-6.col-xl-6.mb-3
                     .item.item_alert.item_content-col
                         p.text-uppercase.text-spacing-50.text-bold Данные получателя
                         input.form__input.input.input--full(type="text" placeholder="Укажите ваше имя")
                         input.form__input.input.input--full.phone(type="text" placeholder="Контактный телефон *")
                         input.form__input.input.input--full(type="email" placeholder="E-mail *")
-                .col-12.col-xl-6.mb-3
+                .col-12.col-md-6.col-xl-6.mb-3
                     .item.item_alert.item_content-col
                         p.text-uppercase.text-spacing-50.text-bold Адрес доставки
                         input.form__input.input.input--disable.input--full(type="text" placeholder="Город" disabled)

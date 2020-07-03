@@ -57,6 +57,13 @@
 @media all and (min-width: map-get($grid-breakpoints, 'sm')){
     .content-section{
         padding: map-get($map: $spacers, $key: 4) 0;
+
+        &__image-down{
+            height: 360px;
+        }
+        &__image-up{
+            height: 360px;
+        }
     }
 }
 @media all and (min-width: map-get($grid-breakpoints, 'lg')){
