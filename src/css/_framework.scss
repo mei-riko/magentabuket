@@ -53,6 +53,7 @@ a{
     transition: $transition-base;
     &:hover, &:focus{
         text-decoration: none;
+        outline: none;
     }
 }
 .img-fluid{

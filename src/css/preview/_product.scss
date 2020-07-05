@@ -40,10 +40,10 @@
     }
 }
 
-@media all and (min-width: map-get($grid-breakpoints, 'xl')){
-    .preview_product{
-        &__category{
-            margin-top: map-get($map: $spacers, $key: 5);
-        }
-    }
-}
+// @media all and (min-width: map-get($grid-breakpoints, 'xl')){
+//     .preview_product{
+//         &__category{
+//             margin-top: map-get($map: $spacers, $key: 5);
+//         }
+//     }
+// }

@@ -24,6 +24,7 @@
 
         &:hover, &:focus{
             background: $violet url("../img/plus.svg") no-repeat center / 16px;
+            border: 10px solid $pink-200;
         }
 
         &--active{

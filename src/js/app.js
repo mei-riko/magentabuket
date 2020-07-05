@@ -125,9 +125,9 @@ $(document).ready(() =>{
 	$(window).scroll(function() {
 		if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
 			if ( $(window).scrollTop() > 100 ) {
-				$(".fixed-panel").addClass('fixed-panel--show');
+				$(".fixed-panel .fixed-panel__scroll-top").addClass('fixed-panel__scroll-top--show');
 			} else {
-				$(".fixed-panel").removeClass('fixed-panel--show');
+				$(".fixed-panel .fixed-panel__scroll-top").removeClass('fixed-panel__scroll-top--show');
 			}
 		}
 	});

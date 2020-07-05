@@ -6375,6 +6375,7 @@ a {
 
 a:hover, a:focus {
   text-decoration: none;
+  outline: none;
 }
 
 .img-fluid, .gallery__item {
@@ -6492,6 +6493,7 @@ a:hover, a:focus {
 
 .btn_add-to-cart:hover, .btn_add-to-cart:focus {
   background: #6d4152 url("../img/plus.svg") no-repeat center/16px;
+  border: 10px solid #f8f1ed;
 }
 
 .btn_add-to-cart--active {
@@ -6708,7 +6710,7 @@ a:hover, a:focus {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 460px;
+  width: 100%;
   max-width: 100%;
   height: 40px;
   display: -webkit-box;
@@ -6718,18 +6720,46 @@ a:hover, a:focus {
 
 .fixed-panel__scroll-top {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
   background: #73626d url("../img/arrow-up.svg") no-repeat center/20px;
+}
+
+.fixed-panel__scroll-top:hover, .fixed-panel__scroll-top:focus {
+  background-color: #574b53;
+}
+
+.fixed-panel__whatsapp {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  background: #25D366 url("../img/whatsapp-white.svg") no-repeat center/20px;
+}
+
+.fixed-panel__whatsapp:hover, .fixed-panel__whatsapp:focus {
+  background-color: #1da851;
+}
+
+.fixed-panel__phone {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  background: #dd5387 url("../img/phone-white.svg") no-repeat center/20px;
+}
+
+.fixed-panel__phone:hover, .fixed-panel__phone:focus {
+  background-color: #d32a6a;
 }
 
 .fixed-panel__cart {
   position: relative;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
   background: #dd5387 url("../img/bag-white.svg") no-repeat center/20px;
 }
 
@@ -6750,14 +6780,10 @@ a:hover, a:focus {
     left: auto;
     right: 30px;
     bottom: 30px;
-    -webkit-transform: translateX(calc(100% + 30px));
-    -ms-transform: translateX(calc(100% + 30px));
-    transform: translateX(calc(100% + 30px));
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
     width: 60px;
-    height: 60px;
+    height: 220px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .fixed-panel__scroll-top {
     -webkit-box-flex: 0;
@@ -6765,14 +6791,30 @@ a:hover, a:focus {
     flex: 0 0 100%;
     max-width: 100%;
     border-radius: 6px;
+    height: 60px;
+    opacity: 0;
+  }
+  .fixed-panel__scroll-top--show {
+    opacity: 1;
+  }
+  .fixed-panel__whatsapp {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    border-radius: 6px;
+    height: 60px;
+  }
+  .fixed-panel__phone {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    border-radius: 6px;
+    height: 60px;
   }
   .fixed-panel__cart {
     display: none;
-  }
-  .fixed-panel--show {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
   }
 }
 
@@ -7440,6 +7482,7 @@ a:hover, a:focus {
 
 .pagination__item--active {
   position: relative;
+  cursor: default;
 }
 
 .pagination__item--active::before {
@@ -7453,6 +7496,10 @@ a:hover, a:focus {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+.pagination__item--active:hover {
+  color: #3d3e40;
 }
 
 .pagination_gallery {
@@ -7613,12 +7660,6 @@ a:hover, a:focus {
   font-size: 0.875rem;
   line-height: 1.2;
   margin: 0;
-}
-
-@media all and (min-width: 1400px) {
-  .preview_product__category {
-    margin-top: 60px;
-  }
 }
 
 .preview_in-cart {
@@ -8040,6 +8081,7 @@ a:hover, a:focus {
     display: none;
   }
   .catalog__filter-block {
+    display: block;
     position: unset;
     min-height: 1px;
     height: auto;
