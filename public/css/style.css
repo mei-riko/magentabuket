@@ -6385,6 +6385,17 @@ a:hover, a:focus {
   max-width: 100%;
 }
 
+.b-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in-out 100ms;
+  -o-transition: opacity 500ms ease-in-out 100ms;
+  transition: opacity 500ms ease-in-out 100ms;
+}
+
+.b-lazy.b-loaded {
+  opacity: 1;
+}
+
 .blockquote, blockquote {
   position: relative;
   font-family: "Noto Serif", "Times New Roman", serif;
@@ -6584,6 +6595,12 @@ a:hover, a:focus {
   border: 1px solid #3d3e40;
 }
 
+.btn_link {
+  padding: 0;
+  background: inherit;
+  text-decoration: underline;
+}
+
 .btn_arrow-prev {
   display: block;
   width: 40px;
@@ -6719,10 +6736,7 @@ a:hover, a:focus {
 }
 
 .fixed-panel__scroll-top {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
+  display: none;
   background: #73626d url("../img/arrow-up.svg") no-repeat center/20px;
 }
 
@@ -6732,9 +6746,9 @@ a:hover, a:focus {
 
 .fixed-panel__whatsapp {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
+  -ms-flex: 0 0 calc(100% / 3);
+  flex: 0 0 calc(100% / 3);
+  max-width: calc(100% / 3);
   background: #25D366 url("../img/whatsapp-white.svg") no-repeat center/20px;
 }
 
@@ -6744,9 +6758,9 @@ a:hover, a:focus {
 
 .fixed-panel__phone {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
+  -ms-flex: 0 0 calc(100% / 3);
+  flex: 0 0 calc(100% / 3);
+  max-width: calc(100% / 3);
   background: #dd5387 url("../img/phone-white.svg") no-repeat center/20px;
 }
 
@@ -6757,10 +6771,10 @@ a:hover, a:focus {
 .fixed-panel__cart {
   position: relative;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
-  background: #dd5387 url("../img/bag-white.svg") no-repeat center/20px;
+  -ms-flex: 0 0 calc(100% / 3);
+  flex: 0 0 calc(100% / 3);
+  max-width: calc(100% / 3);
+  background: #6d4152 url("../img/bag-white.svg") no-repeat center/20px;
 }
 
 .fixed-panel__count {
@@ -6786,6 +6800,7 @@ a:hover, a:focus {
     flex-wrap: wrap;
   }
   .fixed-panel__scroll-top {
+    display: inline-block;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
@@ -6818,7 +6833,7 @@ a:hover, a:focus {
   }
 }
 
-.text-spacing-50, .btn_cart, .btn_modal, .catalog__title, .product__filter-name {
+.text-spacing-50, .btn_cart, .btn_modal, .catalog__title, .product__filter-name, .jGrowl#jGrowl .jGrowl-notification {
   letter-spacing: 0.8px;
 }
 
@@ -6949,6 +6964,8 @@ a:hover, a:focus {
 }
 
 .item_alert .item_alert__content {
+  font-size: 1rem;
+  line-height: 1.6;
   color: #73626d;
   margin-bottom: 20px;
 }
@@ -7134,6 +7151,12 @@ a:hover, a:focus {
   }
 }
 
+.list_delivery {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #73626d;
+}
+
 .checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7273,6 +7296,10 @@ a:hover, a:focus {
 
 .input_number {
   padding-right: 10px;
+}
+
+.input_price {
+  padding: 10px;
 }
 
 .input--full {
@@ -7519,6 +7546,10 @@ a:hover, a:focus {
   .logo {
     height: 100px;
   }
+}
+
+.logo_footer {
+  background-position-x: left;
 }
 
 @media all and (min-width: 1400px) {
@@ -7831,7 +7862,7 @@ a:hover, a:focus {
   padding: 5px;
 }
 
-.content p {
+.content p:not(.content__intro) {
   font-size: 1rem;
   color: #3d3e40;
   line-height: 1.6;
@@ -7841,6 +7872,7 @@ a:hover, a:focus {
   font-family: "Noto Serif", "Times New Roman", serif;
   font-style: italic;
   font-size: 16px;
+  line-height: 1.6;
   color: #3d3e40;
   text-align: center;
   margin-top: 30px;
@@ -8093,6 +8125,34 @@ a:hover, a:focus {
   }
 }
 
+#mse2_filters .mse2_number_slider.ui-slider {
+  margin-bottom: 20px;
+  height: 4px;
+}
+
+.mse2_number_slider.ui-slider .ui-slider-handle {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  top: -10px;
+}
+
+.mse2_number_slider.ui-slider .ui-slider-handle:hover, .mse2_number_slider.ui-slider .ui-slider-handle:focus {
+  outline: none;
+}
+
+.mse2_number_slider.ui-slider .ui-slider-handle.ui-state-active {
+  background: #dd5387;
+  border-color: #dd5387;
+}
+
+.mse2_number_inputs > div {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
 .product {
   margin: 0;
 }
@@ -8160,6 +8220,7 @@ a:hover, a:focus {
 }
 
 .jGrowl#jGrowl {
+  position: fixed;
   top: 50%;
   left: 50%;
   right: auto;
@@ -8170,39 +8231,61 @@ a:hover, a:focus {
 }
 
 .jGrowl#jGrowl .jGrowl-notification {
-  width: 320px;
-  padding: 40px 20px;
+  width: auto;
+  max-width: 100%;
+  padding: 15px;
+  padding-right: 60px;
   border: 1px solid #d6d1cd;
-  border-radius: 0;
+  border-radius: 6px;
   font-size: 14px;
-  color: #3d3e40;
+  color: #fbf7f4;
 }
 
 .jGrowl#jGrowl .jGrowl-notification .jGrowl-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 24px;
   line-height: 30px;
-  width: 34px;
+  width: 30px;
   text-align: center;
-  border-radius: 0 0 0 15px;
+  border-radius: 0;
+  border: none;
   color: #fff;
   outline: 0;
 }
 
-.jGrowl#jGrowl .jGrowl-notification.af-message-success {
-  background-color: #f9fcf7 !important;
+.jGrowl#jGrowl .jGrowl-notification.ms2-message-success, .jGrowl#jGrowl .jGrowl-notification.af-message-success {
+  background-color: #25D366 !important;
 }
 
-.jGrowl#jGrowl .jGrowl-notification.af-message-success .jGrowl-close {
-  background: #ced4da;
+.jGrowl#jGrowl .jGrowl-notification.ms2-message-success .jGrowl-close, .jGrowl#jGrowl .jGrowl-notification.af-message-success .jGrowl-close {
+  background: #21bd5c;
 }
 
-.jGrowl#jGrowl .jGrowl-notification.af-message-error {
-  background-color: #fef8f8 !important;
+.jGrowl#jGrowl .jGrowl-notification.ms2-message-error, .jGrowl#jGrowl .jGrowl-notification.af-message-error {
+  background-color: #d20035 !important;
 }
 
-.jGrowl#jGrowl .jGrowl-notification.af-message-error .jGrowl-close {
-  background: #df0a0a;
+.jGrowl#jGrowl .jGrowl-notification.ms2-message-error .jGrowl-close, .jGrowl#jGrowl .jGrowl-notification.af-message-error .jGrowl-close {
+  background: #ec003b;
+}
+
+.jGrowl#jGrowl .jGrowl-notification.ms2-message-info, .jGrowl#jGrowl .jGrowl-notification.af-message-info {
+  background-color: #3d3e40 !important;
+}
+
+.jGrowl#jGrowl .jGrowl-notification.ms2-message-info .jGrowl-close, .jGrowl#jGrowl .jGrowl-notification.af-message-info .jGrowl-close {
+  background: #5b5c5f;
+}
+
+@media all and (min-width: 768px) {
+  .jGrowl#jGrowl .jGrowl-notification {
+    padding: 15px 30px;
+    padding-right: 60px;
+    font-size: 0.875rem;
+  }
 }

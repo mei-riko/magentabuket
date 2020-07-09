@@ -13,8 +13,9 @@
     display: flex;
 
     &__scroll-top{
-        flex: 0 0 25%;
-        max-width: 25%;
+        display: none;
+        // flex: 0 0 25%;
+        // max-width: 25%;
 
         background: $gray-600 url("../img/arrow-up.svg") no-repeat center / 20px;
 
@@ -23,8 +24,8 @@
         }
     }
     &__whatsapp{
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 calc(100% / 3);
+        max-width: calc(100% / 3);
 
         background: #25D366 url("../img/whatsapp-white.svg") no-repeat center / 20px;
 
@@ -33,8 +34,8 @@
         }
     }
     &__phone{
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 calc(100% / 3);
+        max-width: calc(100% / 3);
 
         background: $pink url("../img/phone-white.svg") no-repeat center / 20px;
 
@@ -44,10 +45,10 @@
     }
     &__cart{
         position: relative;
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 calc(100% / 3);
+        max-width: calc(100% / 3);
 
-        background: $pink url("../img/bag-white.svg") no-repeat center / 20px;
+        background: $violet url("../img/bag-white.svg") no-repeat center / 20px;
     }
     &__count{
         position: absolute;
@@ -74,6 +75,7 @@
         flex-wrap: wrap;
         
         &__scroll-top{
+            display: inline-block;
             flex: 0 0 100%;
             max-width: 100%;
             border-radius: 6px;

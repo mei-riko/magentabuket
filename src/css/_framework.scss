@@ -62,6 +62,13 @@ a{
     margin: 0 auto;
     max-width: 100%;
 }
+.b-lazy{
+    opacity:0;
+    transition: opacity 500ms ease-in-out 100ms;
+    &.b-loaded {
+        opacity: 1;
+    }
+}
 .blockquote, blockquote{
     position: relative;
     font-family: $font-family-serif;

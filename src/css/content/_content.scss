@@ -1,5 +1,5 @@
 .content {
-  p {
+  p:not(.content__intro) {
     font-size: $font-size-base;
     color: $gray-800;
     line-height: 1.6;
@@ -8,6 +8,7 @@
     font-family: $font-family-serif;
     font-style: italic;
     font-size: 16px;
+    line-height: 1.6;
     color: $gray-800;
     text-align: center;
 

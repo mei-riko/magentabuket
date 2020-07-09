@@ -119,6 +119,12 @@
             border: 1px solid $gray-800;
         }
     }
+    // Like a Link
+    &_link{
+        padding:0;
+        background:inherit;
+        text-decoration:underline;
+    }
 
     // Next & Prev
     &_arrow-prev{

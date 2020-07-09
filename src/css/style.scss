@@ -38,6 +38,7 @@
 @import "item/temporary";
 
 @import "list/list";
+@import "list/delivery";
 
 @import "form/checkbox";
 @import "form/radio";
@@ -78,10 +79,14 @@
 .container-fluid{
     max-width: 1860px;
 }
+
+// MODx default Alert
+
 .jGrowl {
     font-family: $font-family-base;
 }
 .jGrowl#jGrowl {
+    position: fixed;
     top: 50%;
     left: 50%;
     right: auto;
@@ -91,39 +96,63 @@
     z-index: 99;
 
     .jGrowl-notification {
-        width: 320px;
-        padding: 40px 20px;
+        width: auto;
+        max-width: 100%;
+        padding: map-get($spacers,2);
+        padding-right: 60px;
         border: 1px solid $pink-400;
-        border-radius: 0;
+        border-radius: 6px;
 
         font-size: 14px;
-        color: $gray-800;
+        color: $pink-100;
+        @extend .text-spacing-50;
 
         .jGrowl-close {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 30px;
+            top: 50%;
+            right: map-get($spacers,2);
+            transform: translateY(-50%);
+
+            font-size: 24px;
             line-height: 30px;
-            width: 34px;
+            width: 30px;
             text-align: center;
-            border-radius: 0 0 0 15px;
+            border-radius: 0;
+            border: none;
             color: #fff;
             outline: 0
         }
 
+        &.ms2-message-success,
         &.af-message-success {
-            background-color: #f9fcf7!important;
+            background-color: #25D366!important;
             .jGrowl-close {
-                background: $gray-400;
+                background: darken(#25D366, 5);
             }
         }
-
+        &.ms2-message-error,
         &.af-message-error {
-            background-color: #fef8f8!important;
+            background-color: #d20035!important;
             .jGrowl-close {
-                background: #df0a0a;
+                background: lighten($color: #d20035, $amount: 5);
             }
+        }
+        &.ms2-message-info,
+        &.af-message-info {
+            background-color: $gray-800!important;
+            .jGrowl-close {
+                background: lighten($color: $gray-800, $amount: 12);;
+            }
+        }
+    }
+}
+
+@media all and (min-width: map-get($grid-breakpoints, 'md')){
+    .jGrowl#jGrowl{
+        .jGrowl-notification{
+            padding: map-get($spacers,2) map-get($spacers,3);
+            padding-right: 60px;
+            font-size: $font-size-sm;
         }
     }
 }

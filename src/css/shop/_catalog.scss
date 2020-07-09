@@ -122,3 +122,27 @@
         }
     }
 }
+
+// MODx FIlters Style
+#mse2_filters .mse2_number_slider.ui-slider {
+    margin-bottom: 20px;
+    height: 4px;
+}
+.mse2_number_slider.ui-slider .ui-slider-handle{
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    top:-10px;
+    &:hover, &:focus{
+        outline:none;
+    }
+
+    &.ui-state-active{
+        background:$pink;
+        border-color:$pink;
+    }
+}
+.mse2_number_inputs > div{
+    flex:0 0 50%;
+    max-width:50%;
+}
